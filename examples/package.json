@@ -1,0 +1,54 @@
+{
+  "name": "base-element",
+  "version": "3.0.1",
+  "description": "An element authoring library for creating standalone and performant elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && node test/server.js && zuul --local 9966 -- test/index.js",
+    "ci": "standard && node test/server.js && zuul -- test/index.js",
+    "start": "budo examples/standalone.js",
+    "build": "browserify index.js --standalone BaseElement -o dist/base-element.js",
+    "prepublish": "npm run build"
+  },
+  "author": "Kyle Robinson Young <kyle@dontkry.com> (http://dontkry.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shama/base-element.git"
+  },
+  "files": [
+    "index.js",
+    "dist/"
+  ],
+  "standard": {
+    "ignore": [
+      "**/dist/**"
+    ]
+  },
+  "keywords": [
+    "virtual",
+    "dom",
+    "element",
+    "diff",
+    "browser"
+  ],
+  "devDependencies": {
+    "attach-css": "^1.1.0",
+    "babelify": "^6.0.2",
+    "browser-test-helpers": "^1.0.0",
+    "browserify": "^10.0.0",
+    "budo": "^4.0.0",
+    "standard": "^4.0.0",
+    "tap-spec": "^4.0.0",
+    "tape": "^4.0.0",
+    "zuul": "^3.0.0"
+  },
+  "dependencies": {
+    "dom-event-target": "~1.0.0",
+    "inherits": "~2.0.1",
+    "isarray": "0.0.1",
+    "next-tick": "~0.2.2",
+    "vdom-to-html": "^2.1.1",
+    "virtual-dom": "^2.0.1"
+  }
+}
