@@ -1,6 +1,6 @@
 {
   "name": "prompter",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "a build tool",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "eslint": "eslint src --fix",
     "lint-staged": "lint-staged",
     "lint-pass": "echo '\\033[4;32m♡' Awsome! You are ready to commit ♡' \\033[0m'",
-    "test": "TZ=Asia/Tokyo jest --verbose",	
+    "test": "TZ=Asia/Tokyo jest --verbose",
     "coverage": "npm run test -- --coverage",
     "build": "npm run test && node ./.builder/prompter.js",
     "prettify": "prettier --single-quote --print-width 120 --trailing-comma es5 --write '{src,__{tests,mocks}__}/**/*.js'"
@@ -130,6 +130,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "recompose": "^0.25.0",
-    "yo-yo": "^1.4.1"
+    "yo-yo": "^1.4.1",
+    "yoyo": "^0.2.0"
   }
 }
