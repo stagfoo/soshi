@@ -4,6 +4,7 @@
 - [yo-yo](https://github.com/maxogden/yo-yo)
 - [base-elements](https://github.com/shama/base-element)
 - [bel](https://github.com/shama/bel)
+- react
 
 # Demos
 - yoyo with custom events http://soshi-examples.surge.sh/010.html ( crashes android 2.3 )
