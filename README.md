@@ -10,6 +10,6 @@
 - base-elements + bel (hello world) - http://soshi-examples.surge.sh/011.html 
 - yoyo no logic no events - http://soshi-examples.surge.sh/012.html ( android 2.3 )
 - yoyo no events http://soshi-examples.surge.sh/013.html ( android 2.3 )
-- yoyo no events inside a react component http://soshi-examples.surge.sh/014.html ( android 2.3 )
+- yoyo no events inside a react component http://soshi-examples.surge.sh/latest.html ( android 2.3 )
 # Template literals
 these export very well with google closure compiler into normal string.
