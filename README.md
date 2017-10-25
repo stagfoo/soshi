@@ -5,7 +5,7 @@
 - [base-elements](https://github.com/shama/base-element)
 - [bel](https://github.com/shama/bel)
 
-#Demos
+# Demos
 - yoyo with custom events http://soshi-examples.surge.sh/013.html ( crashes android 2.3 )
 - base-elements + bel (hello world) - http://soshi-examples.surge.sh/011.html 
 - yoyo no logic no events - http://soshi-examples.surge.sh/012.html ( android 2.3 )
