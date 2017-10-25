@@ -7,7 +7,7 @@
 
 # Demos
 - yoyo with custom events http://soshi-examples.surge.sh/013.html ( crashes android 2.3 )
-- base-elements + bel (hello world) - http://soshi-examples.surge.sh/011.html 
+- base-elements + bel (hello world) - http://soshi-examples.surge.sh/011.html ( crashes android 2.3 )
 - yoyo no logic no events - http://soshi-examples.surge.sh/012.html ( android 2.3 )
 - yoyo no events http://soshi-examples.surge.sh/013.html ( android 2.3 )
 - yoyo no events inside a react component http://soshi-examples.surge.sh/latest.html ( android 2.3 )
