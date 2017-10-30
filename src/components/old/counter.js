@@ -1,4 +1,5 @@
 const yo = require('yo-yo');
+
 function toInteger(number) {
   return Math.round(
     // round to nearest integer
@@ -20,9 +21,7 @@ class Counter {
     return yo`<div class="randomNumber" >
       Random Numbers in react 
       <ul>
-      ${items.map(function(item) {
-        return yo`<li>Item Number ${item}</li>`;
-      })}
+      ${items.map(item => yo`<li>Item Number ${item}</li>`)}
       </ul>
       <button onclick=${() => {
         self.update();

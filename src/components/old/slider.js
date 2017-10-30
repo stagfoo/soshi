@@ -8,7 +8,7 @@ class Slider extends BaseElement {
     // Create a property for the actively shown slide
     this.activeIndex = 0;
     // When a slide is selected, set that as the activeIndex then render
-    this.addEventListener('select', (idx) => {
+    this.addEventListener('select', idx => {
       this.activeIndex = idx;
       this.render(this.data);
     });
@@ -30,29 +30,41 @@ class Slider extends BaseElement {
         this.content = slide.content;
       }
       // Render each <li><button/></li>
-      return this.html(tag, {
-        style: {
-          listStyle: 'none',
-          float: 'left',
-          margin: '0 .5em',
-        },
-      }, [
-        this.html('button', {
-          onclick: (e) => {
-            // onclick send a select event up with index
-            this.send('select', idx);
+      return this.html(
+        tag,
+        {
+          style: {
+            listStyle: 'none',
+            float: 'left',
+            margin: '0 .5em',
           },
-        }, slide.name),
-      ]);
+        },
+        [
+          this.html(
+            'button',
+            {
+              onclick: e => {
+                // onclick send a select event up with index
+                this.send('select', idx);
+              },
+            },
+            slide.name
+          ),
+        ]
+      );
     });
     // Build our tree with <div><ul>buttons</ul><div>content</div></div>
     const vtree = this.html('div', [
       this.html('ul.sections', this, slides),
-      this.html('.content', {
-        style: {
-          padding: '1em',
+      this.html(
+        '.content',
+        {
+          style: {
+            padding: '1em',
+          },
         },
-      }, this.content),
+        this.content
+      ),
     ]);
     console.log(vtree);
     // Return the tree wrapped in afterRender
@@ -61,9 +73,9 @@ class Slider extends BaseElement {
 }
 export default Slider;
 // The end user API from here on down
-//const slides = new Slider(document.body);
-//slides.render([
- // { name: 'intro', content: 'Intro...' },
- // { name: 'examples', content: 'Examples...' },
- // { name: 'outro', content: 'Outro...' },
+// const slides = new Slider(document.body);
+// slides.render([
+// { name: 'intro', content: 'Intro...' },
+// { name: 'examples', content: 'Examples...' },
+// { name: 'outro', content: 'Outro...' },
 // ]);
