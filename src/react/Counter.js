@@ -9,5 +9,5 @@ class CounterReact extends Component {
   }
 }
 
-//ReactDOM.render(CounterEl, document.body);
+// ReactDOM.render(CounterEl, document.body);
 exports.modules = CounterReact;

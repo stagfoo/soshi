@@ -1,6 +1,6 @@
 {
   "name": "prompter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "a build tool",
   "main": "index.js",
   "scripts": {

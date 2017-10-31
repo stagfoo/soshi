@@ -36,3 +36,16 @@
 ### Commits 
 
 
+
+
+# CHANGELOG 0.1.5 
+
+---
+### Build: example-soshi 
+
+### Date: 2017-11-01 
+
+---
+### Commits 
+
+
