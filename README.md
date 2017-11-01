@@ -13,5 +13,6 @@
 - yoyo no events http://soshi-examples.surge.sh/013.html ( android 2.3 )
 - yoyo no events inside a react component http://soshi-examples.surge.sh/014.html ( android 2.3 )
 - title component inside card component (yoyo) http://soshi-examples.surge.sh/latest.html ( android 2.3 missing bind )
+  window.CardEL.update({title: 'Testing'}) <= will only update child component and not other props
 # Template literals
 these export very well with google closure compiler into normal string.
