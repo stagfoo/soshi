@@ -2,7 +2,7 @@
 
 # Libraries testing
 - [yo-yo](https://github.com/maxogden/yo-yo)
-- [base-elements](https://github.com/shama/base-element)
+- ~~[base-elements](https://github.com/shama/base-element)~~
 - [bel](https://github.com/shama/bel)
 - react
 
@@ -16,3 +16,7 @@
   window.CardEL.update({title: 'Testing'}) <= will only update child component and not other props
 # Template literals
 these export very well with google closure compiler into normal string.
+
+# morphdom 
+Lightweight module for morphing an existing DOM node tree to match a target DOM node tree. It's fast and works with the real DOM—no virtual DOM needed!
+- perf https://github.com/patrick-steele-idem/morphdom#benchmarks
