@@ -14,8 +14,8 @@ class Counter {
   constructor() {
     this.numbers = [];
     this.el = null;
-    //android 2.3 Issues this.addEvent = new Event('add_new');
-    //android 2.3 Issues this.updateEvent = new Event('updated');
+    // android 2.3 Issues this.addEvent = new Event('add_new');
+    // android 2.3 Issues this.updateEvent = new Event('updated');
   }
   template(items, self) {
     return yo`<div class="randomNumber" >
@@ -30,7 +30,7 @@ class Counter {
       </div>`;
   }
   update() {
-    //android 2.3 Issues this.el.dispatchEvent(this.updateEvent);
+    // android 2.3 Issues this.el.dispatchEvent(this.updateEvent);
     // add a new random number to our list
     this.numbers.push(getRand(10, 1000));
     // construct a new list and efficiently diff+morph it into the one in the DOM

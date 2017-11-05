@@ -1,6 +1,6 @@
 {
   "name": "prompter",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "a build tool",
   "main": "index.js",
   "scripts": {
@@ -128,6 +128,7 @@
   ],
   "dependencies": {
     "base-element": "^3.0.1",
+    "mdn-polyfills": "^5.4.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "recompose": "^0.25.0",

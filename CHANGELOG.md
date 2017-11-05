@@ -49,3 +49,16 @@
 ### Commits 
 
 
+
+
+# CHANGELOG 0.1.6 
+
+---
+### Build: example-soshi 
+
+### Date: 2017:11:02 
+
+---
+### Commits 
+
+

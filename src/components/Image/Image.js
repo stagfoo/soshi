@@ -1,15 +1,18 @@
 const yo = require('yo-yo');
 
-class Title {
+class Image {
   constructor(props) {
     this.el = null;
     this.props = props;
     this.update = this.update.bind(this);
   }
-  // investigrate multiple header tags
-  // yo`${title}` or yo`<h2>` yo`<h3>`
   template() {
-    return yo`<h1>${this.props.text}</h1>`;
+    return yo`<img 
+        src="${this.props.src}"
+        alt="${this.props.alt}"
+        height="${this.props.height}"
+        width="${this.props.width}"
+    />`;
   }
   update(props) {
     this.props = props;
@@ -21,4 +24,4 @@ class Title {
     return this.el;
   }
 }
-export default Title;
+export default Image;
