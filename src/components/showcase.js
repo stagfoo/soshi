@@ -1,5 +1,6 @@
 import Title from './Title/Title';
 import Card from './Card/Card';
+import Button from './Button/Button';
 
 function CardShowcase() {
   const CardEl = new Card({
@@ -11,7 +12,15 @@ function CardShowcase() {
   window.CardEl = CardEl;
   document.body.appendChild(CardEl.el);
 }
-
+function ButtonShowcase() {
+  const ButtonEl = new Button({
+    text: 'Button Text',
+    clickName: 'login',
+  });
+  ButtonEl.render();
+  window.ButtonEl = ButtonEl;
+  document.body.appendChild(ButtonEl.el);
+}
 function TitleShowcase() {
   const TitleEl = new Title({ text: 'Example' });
   TitleEl.render();
@@ -23,6 +32,7 @@ function TitleShowcase() {
 function Showcase() {
   // Define
   TitleShowcase();
+  ButtonShowcase();
   CardShowcase();
 }
 export default Showcase;
