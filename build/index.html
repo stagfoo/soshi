@@ -10,7 +10,8 @@
 
   <style>
     body {
-      background: #f6f6f6;
+      
+      background: #4b4bff;
       margin: 0px;
       padding: 0px;
       font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, 'Noto Sans', Roboto, Arial, 'Arial Unicode MS', sans-serif;
@@ -23,20 +24,54 @@
       padding-left: 16px;
       padding-right: 16px;
     }
-  </style>
+    .showcase {
+      width: 400px;
+      margin: 10px auto;
+      clear: both;
+      border-top: 5px solid #00ffc4;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 4px 4px 0px 0px #fc4da5;
+    }
+    .page-title {
+      color:#00ffc4
+    }
+    </style>
 </head>
 
 <body>
-  <div id="mount-point"></div>
-  <script src="/prompter/latest/app.js"></script>
-  <div class="container">
-    <img id="example-img" src="https://picsum.photos/640/480?image=1030" />
-    <h1>Example Title.</h1>
-    <div data-soshi-home-slider="true"></div>
+  <h1 class="page-title">素子</h1>
+  <div class="showcase yoyo">
+    <h1> Yoyo </h1>
+    <div class="stage">
+     <!--component-->
+    </div>
+  </div>
+  <div class="showcase react">
+    <h1> React </h1>
+    <div class="stage">
+      <!--component-->
+    </div>
+  </div>
+  <div class="showcase vue">
+    <h1> Vue </h1>
+    <div class="stage">
+     <!--component-->
+    </div>
+  </div>
+
+
+
+  
+
+  <div class="showcase HTML">
+    <h1>Default HTML</h1>
+    <img id="example-img" src="https://i.redd.it/6h0kgc4bs1yz.jpg" />
     <div>
       <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p> 
     </div>
   </div>
+  <script src="/prompter/latest/app.js"></script>
 </body>
 
 </html>

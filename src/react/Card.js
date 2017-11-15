@@ -15,7 +15,6 @@ class CardReact extends Component {
     this.refs.mount.appendChild(this.el);
   }
   render() {
-    console.log(this.props);
     return <div className="react-card" ref="mount" />;
   }
 }
