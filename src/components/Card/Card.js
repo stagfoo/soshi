@@ -12,7 +12,7 @@ class Card {
     };
   }
   template() {
-    const title = this.title.class.update({ text: this.props.title });
+    this.title.class.update({ text: this.props.title });
     return yo`<div class="card">
       <img width="100%" src=${this.props.image} />
      ${this.title.el}
