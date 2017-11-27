@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'eslint-config-airbnb',
+  extends: 'eslint-config-standard',
   globals: {
     window: true,
     document: true,
@@ -7,8 +7,5 @@ module.exports = {
     XMLHttpRequest: true,
     SyntheticEvent: true,
     HTMLButtonElement: true,
-    Rmodules: true,
-    rexGlobalHeader: true,
-    RAT: false,
   },
 };

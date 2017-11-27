@@ -20,3 +20,4 @@ module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
 module.name_mapper='^domain\/\(.*\)$' -> '<PROJECT_ROOT>/src/domain/\1'
 module.name_mapper='^style\/\(.*\)$' -> '<PROJECT_ROOT>/src/style/\1'
 module.name_mapper='.*\.scss\|cssscss∥css$' -> '<PROJECT_ROOT>/CSSModule.js.flow'
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
