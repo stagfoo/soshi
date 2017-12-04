@@ -2,7 +2,7 @@ const path = require('path');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
-  entry: './src/main.ts',
+  entry: './src/render.ts',
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, "build"),
