@@ -49,6 +49,8 @@
   "dependencies": {
     "awesome-typescript-loader": "^3.4.1",
     "mdn-polyfills": "^5.5.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "sheetify": "^6.2.0",
     "yo-yo": "^1.4.1"
   }
