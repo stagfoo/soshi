@@ -1,6 +1,11 @@
 const yo = require('yo-yo');
 
 class Button {
+  el: HTMLElement;
+  props: {
+    eventName: string,
+    text: string,
+  }
   constructor(props) {
     this.el = null;
     this.props = props;
@@ -27,7 +32,7 @@ class Button {
     yo.update(this.el, newView);
   }
   render() {
-    this.el = this.template(this.numbers, this);
+    this.el = this.template();
     return this.el;
   }
 }

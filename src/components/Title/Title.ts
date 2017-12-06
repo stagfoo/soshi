@@ -1,6 +1,10 @@
 const yo = require('yo-yo');
-
+type TemplateProps = {
+  
+}
 class Title {
+  el: HTMLElement,
+  
   constructor(props) {
     this.el = null;
     this.props = props;

@@ -1,0 +1,3 @@
+type SoshiClass = {
+  el: HTMLElement,
+}
