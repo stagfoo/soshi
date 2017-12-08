@@ -44,7 +44,6 @@
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.4",
     "xo": "^0.18.2",
-    "yoyo": "^1.0.0"
   },
   "dependencies": {
     "awesome-typescript-loader": "^3.4.1",
