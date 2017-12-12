@@ -1,5 +1,4 @@
 const path = require('path');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: './src/render.ts',
@@ -19,10 +18,5 @@ module.exports = {
       { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
     ]
-  },
-
-  plugins: [
-    new DashboardPlugin()
-  ]
-
+  }
 };
