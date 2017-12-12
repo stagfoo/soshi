@@ -44,15 +44,15 @@
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.4",
     "xo": "^0.18.2",
-    "yoyo": "^1.0.0"
+    "tslint": "^5.8.0",
+    "sheetify": "^6.2.0",
+    "awesome-typescript-loader": "^3.4.1",
   },
   "dependencies": {
-    "awesome-typescript-loader": "^3.4.1",
+
     "mdn-polyfills": "^5.5.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "sheetify": "^6.2.0",
-    "tslint": "^5.8.0",
     "yo-yo": "^1.4.1"
   }
 }
