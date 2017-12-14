@@ -1,5 +1,6 @@
 const yo = require('yo-yo');
-const Title = require('../Title/Title');
+import Title from '../Title/Title';
+
 type TemplateProps = {
   title: string,
   image: string,
@@ -11,7 +12,7 @@ class Card {
   props: TemplateProps;
   title: {
     el: HTMLElement,
-    class: any
+      class: any //TODO fix interfaces
    }
   constructor(props: TemplateProps) {
     this.el = null;

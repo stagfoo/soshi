@@ -46,7 +46,7 @@
     "xo": "^0.18.2",
     "tslint": "^5.8.0",
     "sheetify": "^6.2.0",
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^3.4.1"
   },
   "dependencies": {
 
