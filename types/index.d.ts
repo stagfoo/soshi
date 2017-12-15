@@ -1,4 +1,4 @@
-export namespace Title {  
+export namespace TitleType {  
   export interface Title {
       el: HTMLElement;
       update: (Object) => Boolean;
