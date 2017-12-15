@@ -1,4 +1,3 @@
-declare namespace Title {
   export interface Title {
   el: HTMLElement;
   update: (Object) => Boolean;
@@ -6,6 +5,5 @@ declare namespace Title {
   template: () => HTMLElement;
   props?: Object;
   }
-}
 
 export = Title; // this exports a function that returns objects of type Emitter, and a type called Emitter
