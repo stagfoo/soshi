@@ -1,6 +1,7 @@
 import Title from './Title/Title';
 import Card from './Card/Card';
 import Button from './Button/Button';
+import List from './List/List';
 
 const stage = document.querySelector('.showcase.yoyo .stage');
 function CardShowcase() {
@@ -29,6 +30,13 @@ function TitleShowcase() {
   TitleEl.update({ text: 'Updated' });
   // Render
   stage.appendChild(TitleEl.el);
+}
+function ListShowcase() {
+  const ListEl = new List({items: ['test', 'test', 'more tsting'] });
+  ListEl.render();
+  ListEl.update({items: ['updated test list', 'more items', 'less oldness']});
+  //
+  stage.appendChild(ListEl.el);
 }
 
 function Showcase() {

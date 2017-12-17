@@ -1,5 +1,6 @@
 const yo = require('yo-yo');
 import Title from '../Title/Title';
+
 // MOVE TO COMMON PLACE
 interface Soshi {
     el: HTMLElement;
