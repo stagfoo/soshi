@@ -1,5 +1,13 @@
 const yo = require('yo-yo');
 import Title from '../Title/Title';
+// MOVE TO COMMON PLACE
+interface Soshi {
+    el: HTMLElement;
+    update: (Object) => Boolean;
+    render: () => HTMLElement;
+    template: () => HTMLElement;
+    props?: Object;
+}
 
 type TemplateProps = {
   title: string,
@@ -7,12 +15,12 @@ type TemplateProps = {
   text: string
 }
 
-class Card {
+class Card implements Soshi {
   el: HTMLElement;
   props: TemplateProps;
   title: {
     el: HTMLElement,
-      class: any //TODO fix interfaces
+      class: Soshi
    }
   constructor(props: TemplateProps) {
     this.el = null;

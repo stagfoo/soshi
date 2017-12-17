@@ -1,8 +1,17 @@
 const yo = require('yo-yo');
+// Move to common types
+interface Soshi {
+    el: HTMLElement;
+    update: (Object) => Boolean;
+    render: (Object) => HTMLElement;
+    template: () => HTMLElement;
+    props?: Object;
+}
+
 type TemplateProps = {
  text: string 
 }
-class Title {
+class Title implements Soshi {
   el: HTMLElement
   props: TemplateProps
   constructor(props: TemplateProps) {
