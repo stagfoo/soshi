@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title></title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
 
 
-  <style>
-    body {
-      
-      background: #4b4bff;
-      margin: 0px;
-      padding: 0px;
-      font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, 'Noto Sans', Roboto, Arial, 'Arial Unicode MS', sans-serif;
-    }
-   #example-img {
-    width: 100%;
-    }
-    p,
-    h1 {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    .showcase {
-      width: 400px;
-      margin: 10px auto;
-      clear: both;
-      border-top: 5px solid #00ffc4;
-      background: #fff;
-      padding: 10px;
-      box-shadow: 4px 4px 0px 0px #fc4da5;
-    }
-    .page-title {
-      color:#00ffc4
-    }
+    <style>
+      body {
+        background: #190060;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, 'Noto Sans', Roboto, Arial, 'Arial Unicode MS', sans-serif;
+      }
+      #example-img {
+        width: 100%;
+      }
+      p,
+      h1 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .showcase {
+        width: 400px;
+        position: relative;
+        margin: 50px auto 50px auto;
+        clear: both;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 0, 177, 0.55);
+        background: #fff;
+        padding: 10px;
+        box-shadow:8px 8px 55px 8px rgba(255, 0, 177, 0.44)
+      }
+      .showcase::after {
+        content: "";
+        background: #ff0389;
+        position: absolute;
+        bottom: -15px;
+        width: 80%;
+        height: 30px;
+        border-radius: 8px;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      .page-title {
+        color:#DCFD00;
+        position: fixed;
+        top: 0px;
+        max-width: 10vw;
+      }
+      .page-title img {
+      width: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-  <h1 class="page-title">素子</h1>
-  <div class="showcase yoyo">
-    <h1> Yoyo </h1>
-    <div class="stage">
-     <!--component-->
+  <body>
+    <h1 class="page-title"><img src="soshi.png" alt=""></h1>
+    <div class="showcase yoyo">
+      <h1> Yoyo </h1>
+      <div class="stage">
+        <!--component-->
+      </div>
     </div>
-  </div>
-  <div class="showcase react">
-    <h1> React </h1>
-    <div class="stage">
-      <!--component-->
+    <div class="showcase react">
+      <h1> React </h1>
+      <div class="stage">
+        <!--component-->
+      </div>
     </div>
-  </div>
-  <div class="showcase vue">
-    <h1> Vue </h1>
-    <div class="stage">
-     <!--component-->
+    <div class="showcase vue">
+      <h1> Vue </h1>
+      <div class="stage">
+        <!--component-->
+      </div>
     </div>
-  </div>
 
 
 
-  
 
-  <div class="showcase HTML">
-    <h1>Default HTML</h1>
-    <img id="example-img" src="https://i.redd.it/6h0kgc4bs1yz.jpg" />
-    <div>
-      <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p> 
+
+    <div class="showcase HTML">
+      <h1>Default HTML</h1>
+      <img id="example-img" src="https://i.redd.it/6h0kgc4bs1yz.jpg" />
+      <div>
+        <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p> 
+      </div>
     </div>
-  </div>
-  <script src="/prompter/latest/app.js"></script>
-</body>
+    <script src="bundle.js"></script>
+  </body>
 
 </html>

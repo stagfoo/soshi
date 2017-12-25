@@ -1,7 +1,14 @@
 const yo = require('yo-yo');
-
+type TemplateProps = {
+  src: String,
+  alt: String,
+  height: String,
+  width: String,
+}
 class Image {
-  constructor(props) {
+  el: HTMLElement
+  props: TemplateProps
+  constructor(props: TemplateProps) {
     this.el = null;
     this.props = props;
     this.update = this.update.bind(this);
@@ -20,7 +27,7 @@ class Image {
     yo.update(this.el, newView);
   }
   render() {
-    this.el = this.template(this.numbers, this);
+    this.el = this.template();
     return this.el;
   }
 }

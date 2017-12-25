@@ -2,6 +2,11 @@ import Card from 'components/Card/Card';
 import React, { Component } from 'react';
 
 class CardReact extends Component {
+  compClass: any;
+  el: HTMLElement;
+  refs: {
+    mount: HTMLElement
+  }
   constructor(props) {
     super();
     this.compClass = new Card(props);
