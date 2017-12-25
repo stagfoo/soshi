@@ -18,7 +18,7 @@ function CardShowcase() {
 function ButtonShowcase() {
   const ButtonEl = new Button({
     text: 'Button Text',
-    clickName: 'login',
+    eventName: 'login',
   });
   ButtonEl.render();
   window["ButtonEl"] = ButtonEl;
