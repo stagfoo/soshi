@@ -1,10 +1,17 @@
-<p align="center">![sosh](https://github.com/stagfoo/soshi/blob/master/build/soshi.png?raw=true)</p>
+<p style="border-radius: 8px; background:#000" align="center"><img src="https://github.com/stagfoo/soshi/blob/master/build/soshi.png?raw=true" ></img></p>
 <h1 align="center">Soshi</h1>
 <p align="center">
 Experimental Component libray for any framework
 </p>
 
-# TODO Components
+## Showcase
+```
+npm install
+npm run start
+```
+
+## Planned Components
+these will be build in the futyre
 - input
 - select
 - slider
@@ -13,13 +20,14 @@ Experimental Component libray for any framework
 - tabs
 - request ones through issues
 
-#Build Components
+## Build Components
+these are build and in the showcase page
 - title
 - card
 - list
 - button ( needs typescript cleanup )
 
-# Styling 
+## Styling 
 - these components aren't styled yet but I would like to include a pre styled version in the future for everyone
 
 # Libraries Testing
