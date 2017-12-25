@@ -1,6 +1,8 @@
-![](../build/soshi.png)
-# 素子 | Experimental Component libray for any framework
-
+<p align="center">![sosh](https://github.com/stagfoo/soshi/blob/master/build/soshi.png?raw=true)</p>
+<h1 align="center">Soshi</h1>
+<p align="center">
+Experimental Component libray for any framework
+</p>
 
 # TODO Components
 - input
@@ -9,7 +11,8 @@
 - image
 - modal...
 - tabs
-- request ones
+- request ones through issues
+
 #Build Components
 - title
 - card
