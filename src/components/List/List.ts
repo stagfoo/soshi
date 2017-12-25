@@ -13,6 +13,7 @@ type TemplateProps = {
 
 class List implements Soshi {
   el: HTMLElement;
+  // Name conflict?
   props: TemplateProps;
   
   constructor(props) {
@@ -25,7 +26,7 @@ class List implements Soshi {
     return yo`<li>${d}</li>`;
   }
   template() {
-    return yo`<ul>${this.props.items.map((data) => { return this.childTemplate(data)}}</ul>`;
+    return yo`<ul>${this.props.items.map((data) => this.childTemplate(data)) }</ul>`;
   }
   update(props) {
     this.props = props;

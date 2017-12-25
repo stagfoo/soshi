@@ -25,16 +25,36 @@
       }
       .showcase {
         width: 400px;
+        position: relative;
         margin: 50px auto 50px auto;
         clear: both;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 0, 177, 0.55);
         background: #fff;
         padding: 10px;
-        box-shadow: 18px 18px 85px 10px #F54FA1;
+        box-shadow:8px 8px 55px 8px rgba(255, 0, 177, 0.44)
+      }
+      .showcase::after {
+        content: "";
+        background: #ff0389;
+        position: absolute;
+        bottom: -15px;
+        width: 80%;
+        height: 30px;
+        border-radius: 8px;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
       }
       .page-title {
         color:#DCFD00;
         position: fixed;
         top: 0px;
+        max-width: 10vw;
+      }
+      .page-title img {
+      width: 100%;
       }
     </style>
   </head>

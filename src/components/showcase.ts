@@ -33,9 +33,11 @@ function TitleShowcase() {
 }
 function ListShowcase() {
   const ListEl = new List({items: ['test', 'test', 'more tsting'] });
+  //Test Basic Render
   ListEl.render();
+  //Test Update Function
   ListEl.update({items: ['updated test list', 'more items', 'less oldness']});
-  //
+  // Render
   stage.appendChild(ListEl.el);
 }
 
@@ -44,5 +46,6 @@ function Showcase() {
   TitleShowcase();
   ButtonShowcase();
   CardShowcase();
+  ListShowcase();
 }
 export default Showcase;
