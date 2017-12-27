@@ -1,4 +1,4 @@
-<p style="border-radius: 8px; background:#000" align="center"><img src="https://github.com/stagfoo/soshi/blob/master/build/soshi-bg.png?raw=true" ></img></p>
+<p style="border-radius: 8px; background:#000" align="center"><img src="https://github.com/stagfoo/soshi/blob/master/build/soshi-bg.png?raw=true" width="150px" ></img></p>
 <h1 align="center">Soshi</h1>
 <p align="center">
 Experimental Component libray for any framework
