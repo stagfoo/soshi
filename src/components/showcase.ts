@@ -13,7 +13,7 @@ function CardShowcase() {
   const CardEl = new Card(props);
   CardEl.render();
   window["CardEl"] = CardEl;
-  stage.appendChild(CardEl.el);
+  stage.appendChild(CardEl.node);
 }
 function ButtonShowcase() {
   const ButtonEl = new Button({
@@ -22,14 +22,14 @@ function ButtonShowcase() {
   });
   ButtonEl.render();
   window["ButtonEl"] = ButtonEl;
-  stage.appendChild(ButtonEl.el);
+  stage.appendChild(ButtonEl.node);
 }
 function TitleShowcase() {
   const TitleEl = new Title({ text: 'Example' });
   TitleEl.render();
   TitleEl.update({ text: 'Updated' });
   // Render
-  stage.appendChild(TitleEl.el);
+  stage.appendChild(TitleEl.node);
 }
 function ListShowcase() {
   const ListEl = new List({items: ['test', 'test', 'more tsting'] });

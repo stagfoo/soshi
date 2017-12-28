@@ -1,8 +1,6 @@
 declare class Soshi {
-    el: HTMLElement;
-    props: {
-        text: String;
-    };
+    node: HTMLElement;
+    props: Object;
     constructor(props: any);
     template(): HTMLElement;
     update(props: any): Boolean;

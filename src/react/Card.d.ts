@@ -1,7 +1,7 @@
 import { Component } from 'react';
 declare class CardReact extends Component {
     compClass: any;
-    el: HTMLElement;
+    node: HTMLElement;
     refs: {
         mount: HTMLElement;
     };

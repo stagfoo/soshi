@@ -3,21 +3,21 @@ import React, { Component } from 'react';
 
 class CardReact extends Component {
   compClass: any;
-  el: HTMLElement;
+  node: HTMLElement;
   refs: {
     mount: HTMLElement
   }
   constructor(props) {
     super();
     this.compClass = new Card(props);
-    this.el = this.compClass.render();
+    this.node = this.compClass.render();
   }
   componentWillReceiveProps(nextProps) {
-    this.el = this.compClass.update(nextProps);
-    this.refs.mount.appendChild(this.el);
+    this.node = this.compClass.update(nextProps);
+    this.refs.mount.appendChild(this.node);
   }
   componentDidMount() {
-    this.refs.mount.appendChild(this.el);
+    this.refs.mount.appendChild(this.node);
   }
   render() {
     return <div className="react-card" ref="mount" />;

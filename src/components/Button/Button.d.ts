@@ -1,4 +1,5 @@
-declare class Button {
+import Soshi from '../core';
+declare class Button extends Soshi {
     el: HTMLElement;
     props: {
         eventName: string;
@@ -7,7 +8,5 @@ declare class Button {
     constructor(props: any);
     clickEvent(): void;
     template(): any;
-    update(props: any): void;
-    render(): HTMLElement;
 }
 export default Button;
