@@ -1,7 +1,17 @@
-require("./components/core");
-require("./components/Title/Title");
-require("./components/Button/Button");
-require("./components/Card/Card");
-require("./components/List/List");
-require("./components/Image/Image");
+const Soshi = require("./components/core");
+const Title = require("./components/Title/Title");
+const Button = require("./components/Button/Button");
+const Card = require("./components/Card/Card");
+const List = require("./components/List/List");
+const Img = require("./components/Image/Image");
+
+
+module.exports = {
+  Soshi,
+  Title,
+  Button,
+  Card,
+  List,
+  Img
+}
 

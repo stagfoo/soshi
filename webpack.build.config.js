@@ -6,7 +6,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
-    filename: "bundle.js"},
+    filename: "soshi.js",
+    library: 'soshi',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
+  },
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],

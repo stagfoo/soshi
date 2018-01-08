@@ -1,8 +1,8 @@
 {
   "name": "soshi",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "an xperimental alternatives to webcomponents",
-  "main": "build/bundle.js",
+  "main": "build/soshi.js",
   "scripts": {
     "test": "xo",
     "build": "webpack --config webpack.build.config.js",
@@ -47,15 +47,14 @@
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.4",
     "xo": "^0.18.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "tslint": "^5.8.0",
     "sheetify": "^6.2.0",
     "awesome-typescript-loader": "^3.4.1"
   },
   "dependencies": {
-
     "mdn-polyfills": "^5.5.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "yo-yo": "^1.4.1"
   }
 }

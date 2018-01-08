@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("soshi", [], factory);
+	else if(typeof exports === 'object')
+		exports["soshi"] = factory();
+	else
+		root["soshi"] = factory();
+})(typeof self !== 'undefined' ? self : this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -1794,4 +1804,5 @@ var templateObject_1;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
+});
+//# sourceMappingURL=soshi.js.map
