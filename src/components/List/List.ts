@@ -1,25 +1,13 @@
 const yo = require('yo-yo');
+import Soshi from '../core'
 
-interface Soshi {
-    el: HTMLElement;
-    update: (Object) => Boolean;
-    render: () => HTMLElement;
-    template: () => HTMLElement;
-    props?: Object;
-}
-type TemplateProps = {
-  items: Array<string>
-}
-
-class List implements Soshi {
+class List extends Soshi {
   el: HTMLElement;
-  // Name conflict?
-  props: TemplateProps;
-  
-  constructor(props) {
-    this.el = null;
-    this.props = props;
-    this.update = this.update.bind(this);
+  props: {
+    items: Array<any>
+  }
+  constructor(props){
+    super(props);
   }
   //Move into listItem comp later
   childTemplate(d) {
@@ -27,16 +15,6 @@ class List implements Soshi {
   }
   template() {
     return yo`<ul>${this.props.items.map((data) => this.childTemplate(data)) }</ul>`;
-  }
-  update(props) {
-    this.props = props;
-    const newView = this.template();
-    yo.update(this.el, newView);
-    return true
-  }
-  render() {
-    this.el = this.template();
-    return this.el;
   }
 }
 export default List;

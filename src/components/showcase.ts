@@ -2,6 +2,7 @@ import Title from './Title/Title';
 import Card from './Card/Card';
 import Button from './Button/Button';
 import List from './List/List';
+import Image from './Image/Image';
 
 const stage = document.querySelector('.showcase.yoyo .stage');
 function CardShowcase() {
@@ -31,14 +32,20 @@ function TitleShowcase() {
   // Render
   stage.appendChild(TitleEl.node);
 }
+
 function ListShowcase() {
   const ListEl = new List({items: ['test', 'test', 'more tsting'] });
-  //Test Basic Render
-  ListEl.render();
-  //Test Update Function
   ListEl.update({items: ['updated test list', 'more items', 'less oldness']});
   // Render
-  stage.appendChild(ListEl.el);
+  stage.appendChild(ListEl.node);
+}
+
+function ImageShowcase() {
+  const ImageEl = new Image({ src: 'https://i.redd.it/4sm0zg9kl8501.png', alt: 'n64 logo', height: 300, width: 300 });
+  ImageEl.update({ src: 'http://i.imgur.com/m1e7mBg.jpg', alt: 'n64 logo', height: 300, width: 300 });
+  // Render
+  window["ImageEl"] = ImageEl;
+  stage.appendChild(ImageEl.node);
 }
 
 function Showcase() {
@@ -47,5 +54,6 @@ function Showcase() {
   ButtonShowcase();
   CardShowcase();
   ListShowcase();
+  ImageShowcase();
 }
 export default Showcase;

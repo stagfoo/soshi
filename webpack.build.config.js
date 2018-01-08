@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/render.ts",
+  entry: "./src/library.ts",
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "build"),

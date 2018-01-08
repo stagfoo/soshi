@@ -18,7 +18,7 @@ class Soshi {
   
   update(props): Boolean {
     const prevEl = this.node.innerHTML;
-    this.props = props;
+    this.props = { ...this.props, ...props };
     const newView = this.template();
     yo.update(this.node, newView);
     return prevEl !== this.node.innerHTML; 

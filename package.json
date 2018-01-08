@@ -1,16 +1,19 @@
 {
   "name": "soshi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "an xperimental alternatives to webcomponents",
-  "main": "index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "test": "xo",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.build.config.js",
     "start": "webpack-dev-server --content-base build --hot --inline"
   },
   "xo": {
     "space": true,
     "rules": {
+      "import": {
+        "noUnresolved": false
+      },
       "quotes": [
         "error",
         "double",

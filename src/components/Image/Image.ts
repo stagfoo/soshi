@@ -1,17 +1,12 @@
 const yo = require('yo-yo');
-type TemplateProps = {
-  src: String,
-  alt: String,
-  height: String,
-  width: String,
-}
-class Image {
+import Soshi from '../core';
+class Image extends Soshi {
   el: HTMLElement
-  props: TemplateProps
-  constructor(props: TemplateProps) {
-    this.el = null;
-    this.props = props;
-    this.update = this.update.bind(this);
+  props:{
+    src: String,
+    alt: String,
+    height: Number,
+    width: Number,
   }
   template() {
     return yo`<img 
@@ -20,15 +15,6 @@ class Image {
         height="${this.props.height}"
         width="${this.props.width}"
     />`;
-  }
-  update(props) {
-    this.props = props;
-    const newView = this.template();
-    yo.update(this.el, newView);
-  }
-  render() {
-    this.el = this.template();
-    return this.el;
   }
 }
 export default Image;
