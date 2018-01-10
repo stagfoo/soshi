@@ -7,11 +7,11 @@ const Img = require("./components/Image/Image");
 
 
 module.exports = {
-  Soshi,
-  Title,
-  Button,
-  Card,
-  List,
-  Img
+  soshi: Soshi.default,
+  Title: Title.default,
+  Button: Button.default,
+  Card: Card.default,
+  List: List.default,
+  Image: Img.default
 }
 

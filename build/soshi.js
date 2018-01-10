@@ -262,12 +262,12 @@ var Card = __webpack_require__(16);
 var List = __webpack_require__(17);
 var Img = __webpack_require__(18);
 module.exports = {
-    Soshi: Soshi,
-    Title: Title,
-    Button: Button,
-    Card: Card,
-    List: List,
-    Img: Img
+    soshi: Soshi["default"],
+    Title: Title["default"],
+    Button: Button["default"],
+    Card: Card["default"],
+    List: List["default"],
+    Image: Img["default"]
 };
 
 
