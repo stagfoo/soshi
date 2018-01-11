@@ -75,48 +75,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-var yo = __webpack_require__(1);
-var Soshi = /** @class */ (function () {
-    function Soshi(props) {
-        this.node = null;
-        this.props = props;
-        this.update = this.update.bind(this);
-        this.render = this.render.bind(this);
-        this.render();
-    }
-    Soshi.prototype.template = function () {
-        return null;
-    };
-    Soshi.prototype.update = function (props) {
-        var prevEl = this.node.innerHTML;
-        this.props = __assign({}, this.props, props);
-        var newView = this.template();
-        yo.update(this.node, newView);
-        return prevEl !== this.node.innerHTML;
-    };
-    Soshi.prototype.render = function () {
-        this.node = this.template();
-        return this.node;
-    };
-    return Soshi;
-}());
-/* harmony default export */ __webpack_exports__["default"] = (Soshi);
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var bel = __webpack_require__(6) // turns template tag into DOM elements
@@ -164,7 +122,84 @@ module.exports.update = function (fromNode, toNode, opts) {
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var yo = __webpack_require__(0);
+var Soshi = /** @class */ (function () {
+    function Soshi(props) {
+        this.node = null;
+        this.props = props;
+        this.update = this.update.bind(this);
+        this.render = this.render.bind(this);
+        this.render();
+    }
+    Soshi.prototype.template = function () {
+        return null;
+    };
+    Soshi.prototype.update = function (props) {
+        var prevEl = this.node.innerHTML;
+        this.props = __assign({}, this.props, props);
+        var newView = this.template();
+        yo.update(this.node, newView);
+        return prevEl !== this.node.innerHTML;
+    };
+    Soshi.prototype.render = function () {
+        this.node = this.template();
+        return this.node;
+    };
+    return Soshi;
+}());
+/* harmony default export */ __webpack_exports__["a"] = (Soshi);
+
+
+/***/ }),
 /* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(1);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var yo = __webpack_require__(0);
+
+var Title = /** @class */ (function (_super) {
+    __extends(Title, _super);
+    function Title() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Title.prototype.template = function () {
+        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<h1>", "</h1>"], ["<h1>", "</h1>"])), this.props.text);
+    };
+    return Title;
+}(__WEBPACK_IMPORTED_MODULE_0__core__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (Title);
+var templateObject_1;
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var topLevel = typeof global !== 'undefined' ? global :
@@ -185,10 +220,10 @@ if (typeof document !== 'undefined') {
 
 module.exports = doccy;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -215,67 +250,36 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(0);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-var yo = __webpack_require__(1);
-
-var Title = /** @class */ (function (_super) {
-    __extends(Title, _super);
-    function Title() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Title.prototype.template = function () {
-        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<h1>", "</h1>"], ["<h1>", "</h1>"])), this.props.text);
-    };
-    return Title;
-}(__WEBPACK_IMPORTED_MODULE_0__core__["default"]));
-/* harmony default export */ __webpack_exports__["default"] = (Title);
-var templateObject_1;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Title_Title__ = __webpack_require__(2);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Title_Title__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_List_List__ = __webpack_require__(15);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return __WEBPACK_IMPORTED_MODULE_1__components_List_List__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Card_Card__ = __webpack_require__(16);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return __WEBPACK_IMPORTED_MODULE_2__components_Card_Card__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Button_Button__ = __webpack_require__(17);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return __WEBPACK_IMPORTED_MODULE_3__components_Button_Button__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Image_Image__ = __webpack_require__(18);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Image", function() { return __WEBPACK_IMPORTED_MODULE_4__components_Image_Image__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_core__ = __webpack_require__(1);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Soshi", function() { return __WEBPACK_IMPORTED_MODULE_5__components_core__["a"]; });
 
 
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
 
-var Soshi = __webpack_require__(0);
-var Title = __webpack_require__(4);
-var Button = __webpack_require__(15);
-var Card = __webpack_require__(16);
-var List = __webpack_require__(17);
-var Img = __webpack_require__(18);
-module.exports = {
-    soshi: Soshi["default"],
-    Title: Title["default"],
-    Button: Button["default"],
-    Card: Card["default"],
-    List: List["default"],
-    Image: Img["default"]
-};
+
+
+
 
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(2)
+var document = __webpack_require__(3)
 var hyperx = __webpack_require__(8)
 var onload = __webpack_require__(10)
 
@@ -753,7 +757,7 @@ function attributeToProperty (h) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* global MutationObserver */
-var document = __webpack_require__(2)
+var document = __webpack_require__(3)
 var window = __webpack_require__(11)
 var assert = __webpack_require__(12)
 var watch = Object.create(null)
@@ -874,7 +878,7 @@ if (typeof window !== "undefined") {
 
 module.exports = win;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 12 */
@@ -1640,8 +1644,7 @@ module.exports = [
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(1);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1656,7 +1659,88 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
-var yo = __webpack_require__(1);
+var yo = __webpack_require__(0);
+
+var List = /** @class */ (function (_super) {
+    __extends(List, _super);
+    function List(props) {
+        return _super.call(this, props) || this;
+    }
+    //Move into listItem comp later
+    List.prototype.childTemplate = function (d) {
+        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<li>", "</li>"], ["<li>", "</li>"])), d);
+    };
+    List.prototype.template = function () {
+        var _this = this;
+        return yo(templateObject_2 || (templateObject_2 = __makeTemplateObject(["<ul>", "</ul>"], ["<ul>", "</ul>"])), this.props.items.map(function (data) { return _this.childTemplate(data); }));
+    };
+    return List;
+}(__WEBPACK_IMPORTED_MODULE_0__core__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (List);
+var templateObject_1, templateObject_2;
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Title_Title__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core__ = __webpack_require__(1);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var yo = __webpack_require__(0);
+
+
+var Card = /** @class */ (function (_super) {
+    __extends(Card, _super);
+    function Card() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Card.prototype.template = function () {
+        //TODO Fix
+        var title = new __WEBPACK_IMPORTED_MODULE_0__Title_Title__["a" /* default */]({ text: this.props.title });
+        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<div class=\"card\">\n      <img width=\"100%\" src=", " />\n     ", "\n    <p>\n      ", "\n    </p>\n    </div>"], ["<div class=\"card\">\n      <img width=\"100%\" src=", " />\n     ", "\n    <p>\n      ", "\n    </p>\n    </div>"])), this.props.image, title.node, this.props.text);
+    };
+    return Card;
+}(__WEBPACK_IMPORTED_MODULE_1__core__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (Card);
+var templateObject_1;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(1);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var yo = __webpack_require__(0);
 
 var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
@@ -1677,92 +1761,9 @@ var Button = /** @class */ (function (_super) {
         return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<button onclick=", ">\n          ", "\n    </button>"], ["<button onclick=", ">\n          ", "\n    </button>"])), this.clickEvent, this.props.text);
     };
     return Button;
-}(__WEBPACK_IMPORTED_MODULE_0__core__["default"]));
-/* harmony default export */ __webpack_exports__["default"] = (Button);
+}(__WEBPACK_IMPORTED_MODULE_0__core__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (Button);
 var templateObject_1;
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Title_Title__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core__ = __webpack_require__(0);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-var yo = __webpack_require__(1);
-
-
-var Card = /** @class */ (function (_super) {
-    __extends(Card, _super);
-    function Card() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Card.prototype.template = function () {
-        //TODO Fix
-        var title = new __WEBPACK_IMPORTED_MODULE_0__Title_Title__["default"]({ text: this.props.title });
-        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<div class=\"card\">\n      <img width=\"100%\" src=", " />\n     ", "\n    <p>\n      ", "\n    </p>\n    </div>"], ["<div class=\"card\">\n      <img width=\"100%\" src=", " />\n     ", "\n    <p>\n      ", "\n    </p>\n    </div>"])), this.props.image, title.node, this.props.text);
-    };
-    return Card;
-}(__WEBPACK_IMPORTED_MODULE_1__core__["default"]));
-/* harmony default export */ __webpack_exports__["default"] = (Card);
-var templateObject_1;
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(0);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-var yo = __webpack_require__(1);
-
-var List = /** @class */ (function (_super) {
-    __extends(List, _super);
-    function List(props) {
-        return _super.call(this, props) || this;
-    }
-    //Move into listItem comp later
-    List.prototype.childTemplate = function (d) {
-        return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<li>", "</li>"], ["<li>", "</li>"])), d);
-    };
-    List.prototype.template = function () {
-        var _this = this;
-        return yo(templateObject_2 || (templateObject_2 = __makeTemplateObject(["<ul>", "</ul>"], ["<ul>", "</ul>"])), this.props.items.map(function (data) { return _this.childTemplate(data); }));
-    };
-    return List;
-}(__WEBPACK_IMPORTED_MODULE_0__core__["default"]));
-/* harmony default export */ __webpack_exports__["default"] = (List);
-var templateObject_1, templateObject_2;
 
 
 /***/ }),
@@ -1770,8 +1771,7 @@ var templateObject_1, templateObject_2;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core__ = __webpack_require__(1);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1786,7 +1786,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
-var yo = __webpack_require__(1);
+var yo = __webpack_require__(0);
 
 var Image = /** @class */ (function (_super) {
     __extends(Image, _super);
@@ -1797,8 +1797,8 @@ var Image = /** @class */ (function (_super) {
         return yo(templateObject_1 || (templateObject_1 = __makeTemplateObject(["<img \n        src=\"", "\"\n        alt=\"", "\"\n        height=\"", "\"\n        width=\"", "\"\n    />"], ["<img \n        src=\"", "\"\n        alt=\"", "\"\n        height=\"", "\"\n        width=\"", "\"\n    />"])), this.props.src, this.props.alt, this.props.height, this.props.width);
     };
     return Image;
-}(__WEBPACK_IMPORTED_MODULE_0__core__["default"]));
-/* harmony default export */ __webpack_exports__["default"] = (Image);
+}(__WEBPACK_IMPORTED_MODULE_0__core__["a" /* default */]));
+/* harmony default export */ __webpack_exports__["a"] = (Image);
 var templateObject_1;
 
 

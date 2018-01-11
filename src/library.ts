@@ -1,17 +1,8 @@
-const Soshi = require("./components/core");
-const Title = require("./components/Title/Title");
-const Button = require("./components/Button/Button");
-const Card = require("./components/Card/Card");
-const List = require("./components/List/List");
-const Img = require("./components/Image/Image");
-
-
-module.exports = {
-  soshi: Soshi.default,
-  Title: Title.default,
-  Button: Button.default,
-  Card: Card.default,
-  List: List.default,
-  Image: Img.default
-}
+export { default as Title } from "./components/Title/Title";
+export { default as List } from "./components/List/List";
+export { default as Card } from "./components/Card/Card";
+export { default as Button } from "./components/Button/Button";
+export { default as Image } from "./components/Image/Image";
+//TODO: setup soshi as default export
+export { default as Soshi } from './components/core';
 
