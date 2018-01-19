@@ -29,3 +29,19 @@
 //   }
 // }
 // export default Button;
+
+import {getRenderer} from '../../core';
+
+function clickEvent(eventName) {
+      // Create the even
+      const event = document.createEvent('Event');
+      event.initEvent(eventName, true, true);
+      // Listen for the event.
+      // target can be any Element or other EventTarget.
+      return (e) => { e.target.dispatchEvent(event) };
+}
+export default function Button(props, type = 'dom') : HTMLElement {
+  const html = getRenderer(type);
+  const click = clickEvent(props.eventName);
+  return html`<button onclick=${click}>${props.text}</button>`;
+}

@@ -1,32 +1,36 @@
 import Title from './Title/Title';
 import List from './List/List';
+import Button from './Button/Button';
+import Card from './Card/Card';
 
 const stage = document.querySelector('.showcase.yoyo .stage');
 
-// function CardShowcase() {
-//   const props = {
-//     title: "soshi card",
-//     image: "https://78.media.tumblr.com/425b54637a9bb4845ee75b1f4e313375/tumblr_orfzviZEqq1wp0r4no1_1280.jpg",
-//     text: "Vaporwave is a microgenre of electronic music and an Internet meme that emerged in the early 2010s.[17] The music typically features a fascination with 1980s and 1990s styles of mood music such as smooth jazz, elevator music, R&B, and lounge music"
-//   }
-//   const CardEl = new Card(props);
-//   CardEl.render();
-//   window["CardEl"] = CardEl;
-//   stage.appendChild(CardEl.node);
-// }
-// function ButtonShowcase() {
-//   const ButtonEl = new Button({
-//     text: 'Button Text',
-//     eventName: 'login',
-//   });
-//   ButtonEl.render();
-//   window["ButtonEl"] = ButtonEl;
-//   stage.appendChild(ButtonEl.node);
-// }
+function CardShowcase() {
+  const props = {
+    title: "soshi card",
+    image: "https://78.media.tumblr.com/425b54637a9bb4845ee75b1f4e313375/tumblr_orfzviZEqq1wp0r4no1_1280.jpg",
+    text: "Vaporwave is a microgenre of electronic music and an Internet meme that emerged in the early 2010s.[17] The music typically features a fascination with 1980s and 1990s styles of mood music such as smooth jazz, elevator music, R&B, and lounge music"
+  }
+  const CardNode = Card(props);
+  stage.appendChild(CardNode);
+}
+function ButtonShowcase() {
+  const ButtonNode = Button({
+    text: 'Button Text',
+    eventName: 'login',
+  });
+  console.log(ButtonNode);
+  ButtonNode.addEventListener('login', function (e) { console.log(e) }, false);
+  stage.appendChild(ButtonNode);
+}
+
+
 function TitleShowcase() {
+
   const TitleNode = Title({
     text: 'Hello World'
-  }, 'dom');
+  });
+
   const TitleVNode = Title({
     text: 'Hello World'
   }, 'vdom');
@@ -52,8 +56,8 @@ function ListShowcase() {
 function Showcase() {
   // Define
   TitleShowcase();
-  // ButtonShowcase();
-  // CardShowcase();
+  ButtonShowcase();
+  CardShowcase();
   ListShowcase();
   // ImageShowcase();
 }
