@@ -1,4 +1,5 @@
 import Title from './Title/Title';
+import List from './List/List';
 
 const stage = document.querySelector('.showcase.yoyo .stage');
 
@@ -34,12 +35,11 @@ function TitleShowcase() {
   stage.appendChild(TitleNode);
 }
 
-// function ListShowcase() {
-//   const ListEl = new List({items: ['test', 'test', 'more tsting'] });
-//   ListEl.update({items: ['updated test list', 'more items', 'less oldness']});
-//   // Render
-//   stage.appendChild(ListEl.node);
-// }
+function ListShowcase() {
+  const ListNode = List({items: ['test', 'test', 'more testing'] });
+  // Render
+  stage.appendChild(ListNode);
+}
 
 // function ImageShowcase() {
 //   const ImageEl = new Image({ src: 'https://i.redd.it/4sm0zg9kl8501.png', alt: 'n64 logo', height: 300, width: 300 });
@@ -54,7 +54,7 @@ function Showcase() {
   TitleShowcase();
   // ButtonShowcase();
   // CardShowcase();
-  // ListShowcase();
+  ListShowcase();
   // ImageShowcase();
 }
 export default Showcase;

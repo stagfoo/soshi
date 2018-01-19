@@ -11,4 +11,3 @@ export function getRenderer(type){
         return hyperx(dom);
     }
 }
-
