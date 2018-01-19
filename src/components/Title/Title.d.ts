@@ -1,1 +1,1 @@
-export default function Title(type: any, props: any): HTMLElement;
+export default function Title(props: any, type?: string): HTMLElement;

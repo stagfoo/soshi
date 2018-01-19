@@ -23,12 +23,12 @@ const stage = document.querySelector('.showcase.yoyo .stage');
 //   stage.appendChild(ButtonEl.node);
 // }
 function TitleShowcase() {
-  const TitleNode = Title('dom', {
+  const TitleNode = Title({
     text: 'Hello World'
-  });
-  const TitleVNode = Title('vdom', {
+  }, 'dom');
+  const TitleVNode = Title({
     text: 'Hello World'
-  });
+  }, 'vdom');
   // Render
   console.log(TitleVNode);
   stage.appendChild(TitleNode);
