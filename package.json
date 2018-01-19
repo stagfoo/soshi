@@ -1,6 +1,6 @@
 {
   "name": "soshi",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "an xperimental alternatives to webcomponents",
   "main": "build/soshi.js",
   "scripts": {
