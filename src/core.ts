@@ -1,21 +1,14 @@
-const bel = require('bel');
-var vdom = require('virtual-dom')
+var dom = require('bel').createElement
+var vdom = require('virtual-dom');
 var hyperx = require('hyperx')
 // hyperx can use react!;
-var hx = hyperx(vdom.h);
 
-function renderDom(template){
-  return bel`${template}`;
-}
-function renderVdom(template){
-  return hx`${template}`
-}
-
-function renderTemplate(type, template){
+export function getRenderer(type){
     switch (type) {
       case 'vdom':
-        return renderVdom(template);
+        return hyperx(vdom.h);
       default:
-        return renderDom(template);
+        return hyperx(dom);
     }
 }
+

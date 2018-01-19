@@ -1,14 +1,6 @@
-const yo = require('yo-yo');
-import Soshi from '../core'
+import {getRenderer} from '../../core';
+export default function Title(type, props) : HTMLElement {
+  const html = getRenderer(type);
+  return html`<h1>${props.text}</h1>`;
 
-class Title extends Soshi {
-  el: HTMLElement
-  props: {
-   text: string,
-  }
-  
-  template(): HTMLElement {
-    return yo`<h1>${this.props.text}</h1>`;
-  }
 }
-export default Title;
