@@ -1,35 +1,35 @@
-import Title from 'components/Title/Title';
-import List from 'components/List/List';
-import Card from 'components/Card/Card';
-import Image from 'components/Image/Image';
 import Soshi from '../core'
 
+// Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
+// Choose Dom render for components
 const comps = new Soshi({ dom: 'dom' });
 
 function CardShowcase() {
+  //Create Props for Card
   const props = {
     title: "soshi card",
     image: "https://heroichollywood.b-cdn.net/wp-content/uploads/2017/03/GHOST-1024x564.png?x42694",
     text: "Vaporwave is a microgenre of electronic music and an Internet meme that emerged in the early 2010s.[17] The music typically features a fascination with 1980s and 1990s styles of mood music such as smooth jazz, elevator music, R&B, and lounge music"
   }
+  // Get the Card function from inside Soshi
   const CardNode = comps.card(props);
+  // Renders using bel because 'dom' was chosen at instance
   stage.appendChild(CardNode);
 }
+
 function ButtonShowcase() {
   const ButtonNode = comps.button({
     text: 'Button Text',
     eventName: 'login',
   });
-  console.log(ButtonNode);
+  // add event listner to check custom event name
   ButtonNode.addEventListener('login', function (e) { console.log(e) }, false);
   stage.appendChild(ButtonNode);
 }
 
-
 function TitleShowcase() {
   const SoshiTitle = comps.title({text: 'Hello from inside soshi'});
-  console.log(SoshiTitle);
   stage.appendChild(SoshiTitle);
 }
 
