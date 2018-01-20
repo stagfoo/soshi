@@ -9,7 +9,8 @@ class CardReact extends Component {
   }
 
   render() {
-    return Components.card(this.props);
+
+    return Components.r.card(this.props);
   }
 }
 

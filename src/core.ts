@@ -30,7 +30,7 @@ export default function Soshi (
   // Select the render for the template lits
   this.builder = getRenderer(options.dom, options.customDom);
   // return function with the renderer passed in
-  this.components = {
+  this.r = {
     'title': (props) => Title(props, this.builder),
     'button': (props) => Button(props, this.builder),
     'card': (props) => Card(props, this.builder),
@@ -38,15 +38,13 @@ export default function Soshi (
     'list': (props => List(props, this.builder))
   }
   // return the list for easy use.
-  return this.components;
 }
-
 //Untested but add your own function,
 //function comp(props, html){
 //  return html`<p></p>`
 //}
 // This would then use the rendered your chose on instancing
 Soshi.prototype.add = function(name, comp){
-  this.components[name] = (props) => comp(props, this.builder);
-  return this.components[name]
+  this.r[name] = (props) => comp(props, this.builder);
+  return this.r[name]
 }
