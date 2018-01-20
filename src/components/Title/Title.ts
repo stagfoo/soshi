@@ -1,6 +1,5 @@
 import {getRenderer} from '../../core';
 
-export default function Title(props, type = 'dom') : HTMLElement {
-  const html = getRenderer(type);
+export default function Title(props, html = getRenderer('dom')) : HTMLElement {
   return html`<h1>${props.text}</h1>`;
 }

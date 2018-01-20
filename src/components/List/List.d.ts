@@ -1,1 +1,1 @@
-export default function List(props: any, type?: string): HTMLElement;
+export default function List(props: any, html?: any): HTMLElement;

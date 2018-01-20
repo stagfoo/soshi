@@ -1,1 +1,1 @@
-export default function Button(props: any, type?: string): HTMLElement;
+export default function Button(props: any, html?: any): HTMLElement;
