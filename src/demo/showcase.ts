@@ -1,10 +1,10 @@
 import Soshi from '../core'
-
+import componentList from 'components/componentList';
 // Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
 // Choose Dom render for components
 const comps = new Soshi({ dom: 'dom' });
-
+comps.load(componentList);
 function CardShowcase() {
   //Create Props for Card
   const props = {
