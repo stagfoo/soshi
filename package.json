@@ -39,18 +39,19 @@
   "homepage": "https://github.com/stagfoo/soshi#readme",
   "devDependencies": {
     "@types/node": "^8.0.54",
+    "awesome-typescript-loader": "^3.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sheetify": "^6.2.0",
     "source-map-loader": "^0.2.3",
     "standard-version": "^4.2.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.2",
+    "vue": "^2.5.13",
     "webpack": "^3.8.1",
     "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.4",
-    "xo": "^0.18.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "tslint": "^5.8.0",
-    "sheetify": "^6.2.0",
-    "awesome-typescript-loader": "^3.4.1"
+    "xo": "^0.18.2"
   },
   "dependencies": {
     "bel": "^5.1.5",

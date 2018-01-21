@@ -8,6 +8,11 @@ export function getRenderer(type, customDom?: Function){
         return hyperx(vdom.h);
       case 'custom':
         return hyperx(customDom);
+      case 'plaintext':
+        return function(d,v,i) {
+          debugger
+          return d.join('');
+        }
       default:
         return hyperx(dom);
     }
