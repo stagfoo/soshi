@@ -1,20 +1,10 @@
-const yo = require('yo-yo');
-import Soshi from '../core'
 
-class List extends Soshi {
-  el: HTMLElement;
-  props: {
-    items: Array<any>
-  }
-  constructor(props){
-    super(props);
-  }
-  //Move into listItem comp later
-  childTemplate(d) {
-    return yo`<li>${d}</li>`;
-  }
-  template() {
-    return yo`<ul>${this.props.items.map((data) => this.childTemplate(data)) }</ul>`;
-  }
+import {getRenderer} from '../../core';
+
+function ListItem(html, text){
+  return html`<li>${text}</li>`;
 }
-export default List;
+
+export default function List(props, html = getRenderer('dom')) : HTMLElement {
+  return html`<ul>${props.items.map(data => ListItem(html, data)) }</ul>`;
+}
