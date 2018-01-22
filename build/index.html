@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Quicksand:400,700" rel="stylesheet">
 
     <style>
       body {
-        background: #190060;
+        background: #0B0B3F;
         margin: 0px;
         padding: 0px;
-        font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, 'Noto Sans', Roboto, Arial, 'Arial Unicode MS', sans-serif;
+        font-family: 'Fira Sans', sans-serif;
       }
       #example-img {
         width: 100%;
@@ -22,6 +22,16 @@
       h1 {
         padding-left: 16px;
         padding-right: 16px;
+      }
+      h1 {
+        font-family: 'Quicksand', sans-serif;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 16px;
       }
       .showcase {
         width: 400px;
@@ -62,13 +72,15 @@
   <body>
     <h1 class="page-title"><img src="soshi.png" alt=""></h1>
     <div class="showcase yoyo">
-      <h1> Yoyo </h1>
+      <h1> Bel </h1>
+      <p>These element are using the bel rendering engine inside soshi</p>
       <div class="stage">
         <!--component-->
       </div>
     </div>
     <div class="showcase react">
       <h1> React </h1>
+      <p>these elements are using the React.createElement rendering engine passed into soshi</p>
       <div class="stage">
         <!--component-->
       </div>
@@ -88,7 +100,7 @@
       <h1>Default HTML</h1>
       <img id="example-img" src="https://i.redd.it/6h0kgc4bs1yz.jpg" />
       <div>
-        <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p> 
+        <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p>
       </div>
     </div>
     <script src="bundle.js"></script>

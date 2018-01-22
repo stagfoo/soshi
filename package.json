@@ -39,7 +39,6 @@
   "homepage": "https://github.com/stagfoo/soshi#readme",
   "devDependencies": {
     "@types/node": "^8.0.54",
-    "awesome-typescript-loader": "^3.4.0",
     "source-map-loader": "^0.2.3",
     "standard-version": "^4.2.0",
     "typescript": "^2.6.2",
@@ -54,7 +53,11 @@
     "awesome-typescript-loader": "^3.4.1"
   },
   "dependencies": {
+    "bel": "^5.1.5",
+    "hyperx": "^2.3.2",
     "mdn-polyfills": "^5.5.0",
+    "vel": "^1.2.0",
+    "virtual-dom": "^2.1.1",
     "yo-yo": "^1.4.1"
   }
 }
