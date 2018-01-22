@@ -5,7 +5,7 @@
   "main": "build/soshi.js",
   "scripts": {
     "test": "xo",
-    "build": "webpack --config webpack.build.config.js",
+    "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --content-base build --hot --inline"
   },
   "xo": {

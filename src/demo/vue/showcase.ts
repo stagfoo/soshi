@@ -19,7 +19,7 @@ var app = new Vue({
 
 }
 Vue.component('soshi-img', {
-  template: `${Components.r.image({src: '{{src}}' })}`
+  template: `${Components.r.image({src: '{{src}}', width: '100%' })}`
 });
 
 export default VueShowcase;
