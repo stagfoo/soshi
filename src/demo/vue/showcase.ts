@@ -1,8 +1,9 @@
 import Vue from 'vue/dist/vue'
 import Soshi from '../../core';
 import componentList from '../../components/componentList'
+import Image from '../../components/Image/Image'
 const Components = new Soshi({
-  dom: 'plaintext'
+  dom: 'vdom'
 });
 
 Components.load(componentList);
@@ -18,8 +19,13 @@ var app = new Vue({
 
 }
 Vue.component('soshi-img', {
-  template: `${Components.r.image({src: '{{src}}' })}`,
-  props: ['src']
+
+  render(h){
+    console.log(h)
+    //return Image({src:''}, h);
+    //return h('img', {props: { src: ''}})
+    return Components.r.image({src: '{{src}}' });
+  }
 });
 
 export default VueShowcase;
