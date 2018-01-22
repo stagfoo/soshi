@@ -22,26 +22,28 @@ these will be build in the futyre
 
 ## Build Components
 these are build and in the showcase page
-- title
-- card
-- list
-- button ( needs typescript cleanup )
+- Title
+- Card
+- Text List (needs expanding)
+- Button
+- Image
 
 ## Styling 
-- these components aren't styled yet but I would like to include a pre styled version in the future for everyone
+- These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
-# Libraries Testing
-[yo-yo](https://github.com/maxogden/yo-yo) is the bases of these components but I will be including examples of these components inside other frameworks to show, you can use them together.
+# Rendering System
+Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional  
 
 ## React
-- title
-- card
+Working using the createElement render function.
+Testing - Card Function
 
 ## Angular
 - not tested
 
 ## Vue
-- not tested
+Some testing started 
+- will provide text to vue templating engine OR hook into vues createElement custom render
 
 ## Ember
 - not tested
@@ -51,12 +53,5 @@ these are build and in the showcase page
 
 
 # Idea behind 素子(soshi)
-to create a simple component system using es6 classes and a templating library.
+to create a simple extendable functional component system.
 The end result should be a HTML element that can be added to any framework.
-
-## Template literals
-these export very well with google closure compiler into normal string.
-
-## Yoyo and Morphdom 
-Lightweight module for morphing an existing DOM node tree to match a target DOM node tree. It's fast and works with the real DOM—no virtual DOM needed!
-- perf https://github.com/patrick-steele-idem/morphdom#benchmarks
