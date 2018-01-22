@@ -12,43 +12,55 @@ npm run start
 
 ## Planned Components
 these will be build in the futyre
-- input
-- select
-- slider
-- image
-- modal...
-- tabs
+
+- Menu
+- Chip (like a tag)
+- Rating
+- Textarea
+- Select
+- Toogle (switch)
+- Checkbox
+- Calendar
+- Slider
+- Tabs
+- Accordion
+- Card List
+- Modal
 - request ones through issues
 
 ## Build Components
 these are build and in the showcase page
+
 - Title
 - Card
-- Text List (needs expanding)
+- Text List
 - Button
 - Image
 
 ## Styling 
-- These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
+These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
 # Rendering System
 Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional  
 
-## React
+## Frameworks
+
+### React
 Working using the createElement render function.
 Testing - Card Function
 
-## Angular
-- not tested
+### Angular
+not tested
 
-## Vue
-Some testing started 
-- will provide text to vue templating engine OR hook into vues createElement custom render
+### Vue
+*Some testing started* 
 
-## Ember
-- not tested
+will provide text to vue templating engine OR hook into vues createElement custom render
 
-## Web Component
+### Ember
+not tested
+
+### Web Component
 - not tested
 
 
