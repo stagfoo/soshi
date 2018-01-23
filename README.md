@@ -53,16 +53,13 @@ Testing - Card Function
 not tested
 
 ### Vue
-*Some testing started* 
-
-will provide text to vue templating engine OR hook into vues createElement custom render
-
-### Ember
-not tested
+Working using a plaintext tagged function returned into the template section.
+probs can be set inside the vue components or mapped with {{prop}}
 
 ### Web Component
 - not tested
 
+add your own framework!
 
 # Idea behind 素子(soshi)
 to create a simple extendable functional component system.

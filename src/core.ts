@@ -2,12 +2,18 @@ const dom = require('bel').createElement
 const vdom = require('virtual-dom');
 const hyperx = require('hyperx')
 
+function plaintext(s, ...v) {
+  return s.map(((str,i) => str + (v[i] || ''))).join('');
+}
+
 export function getRenderer(type, customDom?: Function){
     switch (type) {
       case 'vdom':
         return hyperx(vdom.h);
       case 'custom':
         return hyperx(customDom);
+      case 'plaintext':
+        return plaintext;
       default:
         return hyperx(dom);
     }

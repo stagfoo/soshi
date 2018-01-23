@@ -3,7 +3,7 @@ import componentList from 'components/componentList';
 // Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
 // Choose Dom render for components
-const comps = new Soshi({ dom: 'dom' });
+const comps = new Soshi({ dom: 'bel' });
 comps.load(componentList);
 function CardShowcase() {
   //Create Props for Card
@@ -14,6 +14,7 @@ function CardShowcase() {
   }
   // Get the Card function from inside Soshi
   const CardNode = comps.r.card(props);
+  console.log(CardNode);
   // Renders using bel because 'dom' was chosen at instance
   stage.appendChild(CardNode);
 }
