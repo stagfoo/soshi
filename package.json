@@ -1,12 +1,13 @@
 {
   "name": "soshi",
-  "version": "0.0.22",
+  "version": "1.0.1",
   "description": "an xperimental alternatives to webcomponents",
-  "main": "build/soshi.js",
+  "main": "build/bundle.js",
   "scripts": {
     "test": "xo",
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --content-base build --hot --inline"
+    "build": "webpack --config webpack.build.config.js",
+    "start": "webpack-dev-server --content-base build --hot --inline",
+    "publish": "npm publish"
   },
   "xo": {
     "space": true,
@@ -38,19 +39,19 @@
   },
   "homepage": "https://github.com/stagfoo/soshi#readme",
   "devDependencies": {
-    "@types/node": "^8.0.54",
+    "@types/node": "^8.5.9",
     "awesome-typescript-loader": "^3.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sheetify": "^6.2.0",
     "source-map-loader": "^0.2.3",
-    "standard-version": "^4.2.0",
-    "tslint": "^5.8.0",
+    "standard-version": "^4.3.0",
+    "tslint": "^5.9.1",
     "typescript": "^2.6.2",
     "vue": "^2.5.13",
     "webpack": "^3.8.1",
-    "webpack-dashboard": "^1.0.2",
-    "webpack-dev-server": "^2.9.4",
+    "webpack-dashboard": "^1.1.0",
+    "webpack-dev-server": "^2.11.1",
     "xo": "^0.18.2"
   },
   "dependencies": {

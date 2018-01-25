@@ -1,3 +1,5 @@
+import componentList from 'components/componentList';
+
 const dom = require('bel').createElement
 const vdom = require('virtual-dom');
 const hyperx = require('hyperx')

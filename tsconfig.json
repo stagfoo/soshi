@@ -6,7 +6,6 @@
           },
       "lib": [ "dom", "esnext" ],
       "allowSyntheticDefaultImports": true,
-      "allowJs": true,
       "jsx": "react",
       "module": "esnext",
       "declaration": true,

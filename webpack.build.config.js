@@ -1,12 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/library.ts",
+  entry: "./src/lib.ts",
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
-    filename: "soshi.js",
+    filename: "bundle.js",
     library: 'soshi',
     libraryTarget: 'umd',
     umdNamedDefine: true

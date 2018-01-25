@@ -37,11 +37,27 @@ these are build and in the showcase page
 - Button
 - Image
 
-## Styling 
+## Usage
+include soshi and choose a render, there is 3 included by default
+
+```js
+import Soshi from 'soshi'
+
+const domComps = new Soshi({ dom: 'bel' }); //default renderer bel
+domComps.r.title({text: 'Im a dom element'}); //HTMLElement
+
+const vdomComps = new Soshi({ dom: 'vdom' }); //renderer virtual-dom
+vdomComps.r.title({text: 'Im a vdom element'}); //virtual-dom object
+
+const textComps = new Soshi({ dom: 'plaintext' }); //renderer plaintext
+textComps.r.title({text: 'Im plaintext'}); //plaintext string
+```
+
+## Styling
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
 # Rendering System
-Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional  
+Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional
 
 ## Frameworks
 
