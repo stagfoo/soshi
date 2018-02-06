@@ -5,6 +5,7 @@ import Image from './Image/Image';
 import Button from './Button/Button';
 
 
+//test
 function componentList(builder) {
 return {
     'title': (props) => Title(props, builder),
