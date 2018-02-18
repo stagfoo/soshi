@@ -66,7 +66,7 @@ export default Components;
 ## Styling
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
-### Fairybreay
+### Fairybread
 a small css-in-js library to easy create scope style for components
 [Here](https://github.com/stagfoo/fairybread)
 
