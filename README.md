@@ -4,32 +4,19 @@
 Experimental Component libray for any framework
 </p>
 
-## Showcase
+# Includes
+- 🕹️ Reusable component system
+- 🍞 Simple interface
+- 🐤 Teeny tiny
+- ⚙️ Functional
+
+## Run Example Usage
 ```
 npm install
 npm run start
 ```
-
-## Planned Components
-these will be build in the futyre
-
-- Menu
-- Chip (like a tag)
-- Rating
-- Textarea
-- Select
-- Toogle (switch)
-- Checkbox
-- Calendar
-- Slider
-- Tabs
-- Accordion
-- Card List
-- Modal
-- request ones through issues
-
-## Build Components
-these are build and in the showcase page
+## Built Components
+these are built and in the showcase page
 
 - Title
 - Card
@@ -38,7 +25,7 @@ these are build and in the showcase page
 - Image
 
 ## Usage
-include soshi and choose a render, there is 3 included by default
+include soshi and choose a renderer, there are 3 included by default
 
 ```js
 import Soshi from 'soshi'
@@ -57,26 +44,19 @@ textComps.r.title({text: 'Im plaintext'}); //plaintext string
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
 # Rendering System
-Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional
+Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional component
 
 ## Frameworks
-
-### React
-Working using the createElement render function.
-Testing - Card Function
-
-### Angular
-not tested
-
-### Vue
-Working using a plaintext tagged function returned into the template section.
-probs can be set inside the vue components or mapped with {{prop}}
-
-### Web Component
-- not tested
-
-add your own framework!
+### Tested
+- **Bel** : Works fine
+- **vdom**: Works fine
+- **React** : Working using the createElement render function.
+- **Vue**: Working with `plaintest` render, could be better
+## Untested
+- Angular: No tested
+- Web Component
+- [add your own framework!](https://github.com/stagfoo/soshi/issues/new)
 
 # Idea behind 素子(soshi)
 to create a simple extendable functional component system.
-The end result should be a HTML element that can be added to any framework.
+The end result should be a component that can be added to any framework.
