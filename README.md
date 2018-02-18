@@ -66,6 +66,14 @@ export default Components;
 ## Styling
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
+### Fairybreay
+a small css-in-js library to easy create scope style for components
+[Here](https://github.com/stagfoo/fairybread)
+
+### Raeon - WIP
+a design language focused on rounded and bright beautiful colors
+[Design](https://www.figma.com/file/FpKGFJhA3XsT0GNMVzA0Ywww/Main?node-id=153%3A296) | [Code](https://github.com/stagfoo/raeon)
+
 # Rendering System
 Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional component
 
