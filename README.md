@@ -5,6 +5,8 @@ Experimental Component libray for any framework
 </p>
 
 ## Showcase
+
+[![Join the chat at https://gitter.im/soshijs/Lobby](https://badges.gitter.im/soshijs/Lobby.svg)](https://gitter.im/soshijs/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ```
 npm install
 npm run start
