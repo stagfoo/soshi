@@ -48,6 +48,20 @@ vdomComps.r.title({text: 'Im a vdom element'}); //virtual-dom object
 const textComps = new Soshi({ dom: 'plaintext' }); //renderer plaintext
 textComps.r.title({text: 'Im plaintext'}); //plaintext string
 ```
+## Example external render
+
+```ts
+import Soshi from '../../core';
+import componentList from 'components/componentList'
+import React from 'react';
+
+const Components = new Soshi({
+  dom: 'custom',
+  customDom: React.createElement
+})
+Components.load(componentList);
+export default Components;
+```
 
 ## Styling
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
