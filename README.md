@@ -24,14 +24,6 @@ Experimental Component libray for any framework
 npm install
 npm run start
 ```
-## Built Components
-these are built and in the showcase page
-
-- Title
-- Card
-- Text List
-- Button
-- Image
 
 ## Usage
 include soshi and choose a renderer, there are 3 included by default
@@ -63,6 +55,24 @@ Components.load(componentList);
 export default Components;
 ```
 
+## Built Components
+these are built and in the showcase page
+
+- Title
+- Card
+- Text List
+- Button
+- Image
+
+## How to build a Soshi ready component
+
+```ts
+function Title(props, html) {
+  // html is the renderer
+  return html`<h1>${props.text}</h1>`; //HTMLElement
+}
+```
+
 ## Styling
 These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
 
@@ -72,10 +82,10 @@ a small css-in-js library to easy create scope style for components
 
 ### Raeon - WIP
 a design language focused on rounded and bright beautiful colors
-[Design](https://www.figma.com/file/FpKGFJhA3XsT0GNMVzA0Ywww/Main?node-id=153%3A296) | [Code](https://github.com/stagfoo/raeon)
+[Design](https://www.figma.com/file/FpKGFJhA3XsT0GNMVzA0Ywww/Main) | [Code](https://github.com/stagfoo/raeon)
 
 # Rendering System
-Soshi works by using [hyperx](https://github.com/choojs/hyperx) and simple instancing to return your functional component
+Soshi works by create a simple instanced object, passes in the renderer each time to [hyperx](https://github.com/choojs/hyperx), along with props. this makes structuring component easy and fast.
 
 ## Frameworks
 ### Tested
