@@ -1,6 +1,6 @@
 {
   "name": "soshi",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "an xperimental alternatives to webcomponents",
   "main": "build/bundle.js",
   "scripts": {
