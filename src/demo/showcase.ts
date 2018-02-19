@@ -1,5 +1,6 @@
 import Soshi from '../core'
 import componentList from 'components/componentList';
+import bodyTag from './styles'
 // Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
 // Choose Dom render for components
@@ -58,6 +59,7 @@ function CustomShowcase() {
 
 function Showcase() {
   // Define
+  document.body.appendChild(bodyTag);
   TitleShowcase();
   ButtonShowcase();
   CardShowcase();

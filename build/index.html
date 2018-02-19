@@ -7,72 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Quicksand:400,700" rel="stylesheet">
-
-    <style>
-      body {
-        background: #0B0B3F;
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Ubuntu', sans-serif;
-      }
-      #example-img {
-        width: 100%;
-      }
-      p,
-      h1 {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-      h1 {
-        font-family: 'Quicksand', sans-serif;
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-      p {
-        font-size: 16px;
-        line-height: 24px;
-        padding-bottom: 16px;
-      }
-      .showcase {
-        width: 400px;
-        position: relative;
-        margin: 50px auto 50px auto;
-        clear: both;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 0, 177, 0.55);
-        background: #fff;
-        padding: 10px;
-        box-shadow:8px 8px 55px 8px rgba(255, 0, 177, 0.44)
-      }
-      .title-block {
-        width: 400px;
-        position: relative;
-        margin: 50px auto 50px auto;
-        clear: both;
-        background: transparent;
-        color: #fff;
-      }
-      .showcase::after {
-        content: "";
-        background: #ff0389;
-        position: absolute;
-        bottom: -15px;
-        width: 80%;
-        height: 30px;
-        border-radius: 8px;
-        z-index: -1;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-      }
-      .page-title img {
-      width: 100%;
-      }
-    </style>
+  <style>
+    body {
+      background: #0B0B3F;
+      opacity: 0;
+      transition: 1s ease all;
+    }
+  </style>
   </head>
 
   <body>
-    <h1 class="page-title"><img src="soshi-bg.png" alt=""></h1>
+    <div class="title-block"><img id="logo" src="soshi-bg.png" alt=""></div>
     <div class="title-block">
     <h1> Bel </h1>
     <p>these element are using the bel rendering engine inside soshi</p>

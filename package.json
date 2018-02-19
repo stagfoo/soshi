@@ -41,7 +41,7 @@
   "devDependencies": {
     "@types/node": "^8.5.9",
     "awesome-typescript-loader": "^3.4.1",
-    "fairybread": "^1.2.0",
+    "fairybread": "^2.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "sheetify": "^6.2.0",
