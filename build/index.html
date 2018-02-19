@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Quicksand:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Quicksand:400,700" rel="stylesheet">
 
     <style>
       body {
         background: #0B0B3F;
         margin: 0px;
         padding: 0px;
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
       }
       #example-img {
         width: 100%;
@@ -44,6 +44,14 @@
         padding: 10px;
         box-shadow:8px 8px 55px 8px rgba(255, 0, 177, 0.44)
       }
+      .title-block {
+        width: 400px;
+        position: relative;
+        margin: 50px auto 50px auto;
+        clear: both;
+        background: transparent;
+        color: #fff;
+      }
       .showcase::after {
         content: "";
         background: #ff0389;
@@ -57,57 +65,37 @@
         right: 0;
         margin: 0 auto;
       }
-      .page-title {
-        color:#DCFD00;
-        position: fixed;
-        top: 0px;
-        max-width: 10vw;
-      }
       .page-title img {
       width: 100%;
       }
-      .showcase.versions a {
-      width: 100%;
-      clear:both;
-      text-align: center;
-      display: block;
-    }
     </style>
   </head>
 
   <body>
-    <h1 class="page-title"><img src="soshi.png" alt=""></h1>
-    <div class="showcase versions">
-      <a href="010.html">0.1.0</a>
-      <a href="011.html">0.1.1</a>
-      <a href="012.html">0.1.2</a>
-      <a href="013.html">0.1.3</a>
-      <a href="014.html">0.1.4</a>
-      <a href="015.html">0.1.5</a>
-      <a href="016.html">0.1.6</a>
-      <a href="018.html">> 0.1.8</a>
-      <a href="019.html">0.1.9</a>
-      <a href="0110.html">0.1.10</a>
-      <a href="0111.html">0.1.11</a>
-      <a href="0112.html">0.1.12</a>
-      <a href="latest.html">latest</a>
+    <h1 class="page-title"><img src="soshi-bg.png" alt=""></h1>
+    <div class="title-block">
+    <h1> Bel </h1>
+    <p>these element are using the bel rendering engine inside soshi</p>
     </div>
     <div class="showcase yoyo">
-      <h1> Bel </h1>
-      <p>These element are using the bel rendering engine inside soshi</p>
       <div class="stage">
         <!--component-->
       </div>
     </div>
+    <div class="title-block">
+    <h1> React </h1>
+    <p>these elements are using the React.createElement rendering engine passed into soshi</p>
+  </div>
     <div class="showcase react">
-      <h1> React </h1>
-      <p>these elements are using the React.createElement rendering engine passed into soshi</p>
       <div class="stage">
         <!--component-->
       </div>
     </div>
+    <div class="title-block">
+    <h1> Vue </h1>
+    <p>these elements are using the plaintext rendering engine passed into soshi</p>
+  </div>
     <div class="showcase vue">
-      <h1> Vue </h1>
       <div id="vue-showcase" class="stage">
         <!--component-->
         <div id="app">
@@ -115,13 +103,11 @@
           </div>
       </div>
     </div>
-
-
-
-
-
+    <div class="title-block">
+    <h1>Default HTML</h1>
+    <p>thisi built with just html to compare rendering speeds</p>
+  </div>
     <div class="showcase HTML">
-      <h1>Default HTML</h1>
       <img id="example-img" src="https://i.redd.it/6h0kgc4bs1yz.jpg" />
       <div>
         <p> Spicy jalapeno bacon ipsum dolor amet boudin pork loin pork bacon pig sirloin kielbasa rump ham hock ham. Spare ribs rump pork belly, ground round porchetta t-bone biltong pancetta tail. Pork belly biltong landjaeger prosciutto ham alcatra spare ribs bacon ham hock turducken tail picanha meatball rump porchetta. Pig capicola tail, ham tongue drumstick burgdoggen.</p>
