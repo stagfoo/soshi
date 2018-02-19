@@ -1,62 +1,103 @@
 <p style="border-radius: 8px; background:#000" align="center"><img src="https://github.com/stagfoo/soshi/blob/master/build/soshi-bg.png?raw=true" width="150px" ></img></p>
 <h1 align="center">Soshi</h1>
 <p align="center">
+  <a href="https://gitter.im/soshijs/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge">
+  <img src="https://img.shields.io/badge/chat%20on-gitter-ff69b4.svg?style=flat-square" />
+  </a>
+  <a href="https://www.npmjs.com/package/soshi">
+    <img src="https://img.shields.io/npm/dm/soshi.svg?style=flat-square" />
+  </a>
+    <img src="https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square" />  
+  </p>
+ <p align="center">
 Experimental Component libray for any framework
 </p>
 
-## Showcase
+# Includes
+- 🕹️ Reusable component system
+- 🍞 Simple interface
+- 🐤 Teeny tiny
+- ⚙️ Functional
+
+## Run Example Usage
 ```
 npm install
 npm run start
 ```
 
-## Planned Components
-these will be build in the futyre
-- input
-- select
-- slider
-- image
-- modal...
-- tabs
-- request ones through issues
+## Usage
+include soshi and choose a renderer, there are 3 included by default
 
-## Build Components
-these are build and in the showcase page
-- title
-- card
-- list
-- button ( needs typescript cleanup )
+```js
+import Soshi from 'soshi'
 
-## Styling 
-- these components aren't styled yet but I would like to include a pre styled version in the future for everyone
+const domComps = new Soshi({ dom: 'bel' }); //default renderer bel
+domComps.r.title({text: 'Im a dom element'}); //HTMLElement
 
-# Libraries Testing
-[yo-yo](https://github.com/maxogden/yo-yo) is the bases of these components but I will be including examples of these components inside other frameworks to show, you can use them together.
+const vdomComps = new Soshi({ dom: 'vdom' }); //renderer virtual-dom
+vdomComps.r.title({text: 'Im a vdom element'}); //virtual-dom object
 
-## React
-- title
-- card
+const textComps = new Soshi({ dom: 'plaintext' }); //renderer plaintext
+textComps.r.title({text: 'Im plaintext'}); //plaintext string
+```
+## Example external render
 
-## Angular
-- not tested
+```ts
+import Soshi from '../../core';
+import componentList from 'components/componentList'
+import React from 'react';
 
-## Vue
-- not tested
+const Components = new Soshi({
+  dom: 'custom',
+  customDom: React.createElement
+})
+Components.load(componentList);
+export default Components;
+```
 
-## Ember
-- not tested
+## Built Components
+these are built and in the showcase page
 
-## Web Component
-- not tested
+- Title
+- Card
+- Text List
+- Button
+- Image
 
+## How to build a Soshi ready component
+
+```ts
+function Title(props, html) {
+  // html is the renderer
+  return html`<h1>${props.text}</h1>`; //HTMLElement
+}
+```
+
+## Styling
+These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
+
+### Fairybread
+a small css-in-js library to easy create scope style for components
+[Here](https://github.com/stagfoo/fairybread)
+
+### Raeon - WIP
+a design language focused on rounded and bright beautiful colors
+[Design](https://www.figma.com/file/FpKGFJhA3XsT0GNMVzA0Ywww/Main) | [Code](https://github.com/stagfoo/raeon)
+
+# Rendering System
+Soshi works by create a simple instanced object, passes in the renderer each time to [hyperx](https://github.com/choojs/hyperx), along with props. this makes structuring component easy and fast.
+
+## Frameworks
+### Tested
+- **Bel** : Works fine
+- **vdom**: Works fine
+- **React** : Working using the createElement render function.
+- **Vue**: Working with `plaintest` render, could be better
+## Untested
+- Angular: No tested
+- Web Component
+- [add your own framework!](https://github.com/stagfoo/soshi/issues/new)
 
 # Idea behind 素子(soshi)
-to create a simple component system using es6 classes and a templating library.
-The end result should be a HTML element that can be added to any framework.
-
-## Template literals
-these export very well with google closure compiler into normal string.
-
-## Yoyo and Morphdom 
-Lightweight module for morphing an existing DOM node tree to match a target DOM node tree. It's fast and works with the real DOM—no virtual DOM needed!
-- perf https://github.com/patrick-steele-idem/morphdom#benchmarks
+to create a simple extendable functional component system.
+The end result should be a component that can be added to any framework.

@@ -1,29 +1,11 @@
-const yo = require('yo-yo');
+import { getRenderer } from '../../core';
 import Title from '../Title/Title';
-import Soshi from '../core'
+import Image from '../Image/Image';
 
-class Card extends Soshi {
-  el: HTMLElement;
-  props: {
-    title: string,
-      image: string,
-      text: string
-  }
-  title: {
-    node: HTMLElement,
-    class: any //look at interfaces again
-  }
-
-  template(): HTMLElement {
-    //TODO Fix
-    const title = new Title({text: this.props.title});
-    return yo`<div class="card">
-      <img width="100%" src=${this.props.image} />
-     ${title.node}
-    <p>
-      ${this.props.text}
-    </p>
-    </div>`;
-  }
+export default function Card(props, html = getRenderer('dom')): HTMLElement {
+  return html`<div class="card">
+  ${Image({src:props.image, width:'100%'}, html)}
+  ${Title({text: props.title}, html)}
+  <p>${props.text}</p>
+  </div>`;
 }
-export default Card;

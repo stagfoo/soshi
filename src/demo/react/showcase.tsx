@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import CardReact from './Card';
-
+import CardReact from './Card'
 export default function ReactShowcase() {
   ReactDom.render(
     <CardReact
