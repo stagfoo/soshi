@@ -1,3 +1,4 @@
-export declare class TitleAngular {
+declare class TitleAngular {
     text: string;
 }
+export default TitleAngular;

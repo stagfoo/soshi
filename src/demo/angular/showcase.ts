@@ -20,8 +20,8 @@ class AppComponent {
 // Module
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TitleAngular } from './Title.component';
-import { CardAngular } from './Card.component';
+import TitleAngular from './Title.component';
+import CardAngular from './Card.component';
 @NgModule({
   imports: [
     BrowserModule

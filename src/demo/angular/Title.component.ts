@@ -6,6 +6,7 @@ import Components from './soshi';
   selector: 'title-angular',
   template: `${Components.r.title({text: '{{text}}'})}`
 })
-export class TitleAngular {
+class TitleAngular {
   @Input() text: string;
 }
+export default TitleAngular;
