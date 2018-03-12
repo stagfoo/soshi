@@ -7,6 +7,7 @@
     "test": "xo",
     "build": "webpack --config webpack.build.config.js",
     "start": "webpack-dev-server --content-base build --hot --inline",
+    "surge": "webpack --config webpack.config.js && surge ./build --domain soshi.surge.sh",
     "publish": "npm publish"
   },
   "xo": {
@@ -41,10 +42,9 @@
   "devDependencies": {
     "@types/node": "^8.5.9",
     "awesome-typescript-loader": "^3.4.1",
-    "fairybread": "^2.0.0",
+    "fairybread": "^2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "sheetify": "^6.2.0",
     "source-map-loader": "^0.2.3",
     "standard-version": "^4.3.0",
     "tslint": "^5.9.1",
