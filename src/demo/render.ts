@@ -4,7 +4,7 @@ import ReactShowcase from './react/showcase';
 import VueShowcase from './vue/showcase';
 import AngularShowcase from './angular/showcase';
 
-AngularShowcase();
-VueShowcase();
+// AngularShowcase();
+// VueShowcase();
 ReactShowcase();
 Showcase();

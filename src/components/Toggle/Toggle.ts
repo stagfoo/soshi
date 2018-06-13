@@ -11,8 +11,24 @@ function clickEvent(eventName) {
 
 function styles(disabled: boolean) {
   const css = {
-    wrapper: ``,
-    perl: ``
+    wrapper: `
+    display:block;
+    background: #d1d1d1;
+    height: 20px;
+    position:relative;
+    margin: 10px;
+    min-width: 50px;`,
+    perl: `
+    border-radius: 100%;
+    height: 40px;
+    width:40px;
+    display:block;
+    background: #999;
+    overflow:hidden;
+    top: -10px;
+    left: -5px;
+    position: absolute;
+    `
   }
   return disabled ? css : {
     wrapper: ``,
@@ -23,6 +39,6 @@ function styles(disabled: boolean) {
 export default function Toggle(props, html = getRenderer('dom')) : HTMLElement {
   const click = clickEvent(props.eventName);
   return html`<div style="${styles(props.styles).wrapper}" onclick=${click}>
-    <span class="${styles(props.styles).perl}""></span>
+    <span style="${styles(props.styles).perl}""></span>
   </div>`;
 }

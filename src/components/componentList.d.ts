@@ -4,5 +4,6 @@ declare function componentList(builder: any): {
     'card': (props: any) => HTMLElement;
     'image': (props: any) => HTMLElement;
     'list': (props: any) => HTMLElement;
+    'toggle': (props: any) => HTMLElement;
 };
 export default componentList;

@@ -35,6 +35,14 @@ function TitleShowcase() {
   stage.appendChild(SoshiTitle);
 }
 
+function ToggleShowcase() {
+  const SoshiToggle = comps.r.toggle({
+    eventName: 'toggled',
+    styles: true
+  });
+  stage.appendChild(SoshiToggle);
+}
+
 function ListShowcase() {
   const ListNode = comps.r.list({items: ['test', 'test', 'more testing'] });
   // Render
@@ -61,6 +69,7 @@ function Showcase() {
   // Define
   document.body.appendChild(bodyTag);
   TitleShowcase();
+  ToggleShowcase();
   ButtonShowcase();
   CardShowcase();
   ListShowcase();
