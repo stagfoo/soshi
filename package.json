@@ -1,7 +1,7 @@
 {
   "name": "soshi",
   "version": "1.0.4",
-  "description": "an xperimental alternatives to webcomponents",
+  "description": "an experimental alternatives to webcomponents",
   "main": "build/bundle.js",
   "scripts": {
     "test": "xo",
@@ -32,7 +32,7 @@
     "type": "git",
     "url": "git+https://github.com/stagfoo/soshi.git"
   },
-  "author": "Alexander Ravenking",
+  "author": "Alexander King",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stagfoo/soshi/issues"
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@angular/common": "^5.2.8",
     "@angular/compiler": "^5.2.8",
-    "@angular/core": "^5.2.8",
+    "@angular/core": "^5.2.11",
     "@angular/platform-browser": "^5.2.8",
     "@angular/platform-browser-dynamic": "^5.2.8",
     "@types/node": "^8.5.9",
