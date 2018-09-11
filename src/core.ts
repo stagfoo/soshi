@@ -1,5 +1,3 @@
-import componentList from 'components/componentList';
-
 const dom = require('bel').createElement
 const vdom = require('virtual-dom');
 const hyperx = require('hyperx')
@@ -25,6 +23,7 @@ export default function Soshi (
   options: {
     dom: String
     customDom?: Function,
+    tags: Boolean
   }){
   // Store for debuging
   this.domType = options.dom;
@@ -38,6 +37,24 @@ export default function Soshi (
   // return the list for easy use.
 }
 
+// TODO: change to extending
+Soshi.prototype.registerElement = function(name, element, attr){
+  // Create a new object based of the HTMLElement prototype
+  const XElm = Object.create(HTMLElement.prototype);
+  let shadow;
+  // Set up the element.
+  XElm.createdCallback = function() {
+      shadow = this.createShadowRoot();
+      shadow.appendChild(element(attr));
+  };
+  XElm.attributeChangedCallback = function(name, oldValue, newValue) {
+    attr[name] = newValue;
+    debugger
+    shadow.appendChild(element(attr));
+  }
+  // Register the new element.
+  document.registerElement(`soshi-${name}`, { prototype: XElm });
+}
 //Add your own function,
 //function comp(props, html){
 //  return html`<p></p>`
