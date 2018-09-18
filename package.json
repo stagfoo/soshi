@@ -67,6 +67,7 @@
     "bel": "^5.1.5",
     "hyperx": "^2.3.2",
     "mdn-polyfills": "^5.5.0",
+    "morphdom": "^2.3.3",
     "vel": "^1.2.0",
     "virtual-dom": "^2.1.1",
     "yo-yo": "^1.4.1"

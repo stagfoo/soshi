@@ -1,10 +1,15 @@
 import Soshi from '../core'
 import componentList from 'components/componentList';
 import bodyTag from './styles'
+const morphdom = require('morphdom');
+const patch = require('virtual-dom/patch')
 // Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
 // Choose Dom render for components
-const comps = new Soshi({ dom: 'bel' });
+const comps = new Soshi({
+  dom: 'bel',
+  tags: true
+});
 comps.load(componentList);
 function CardShowcase() {
   //Create Props for Card
@@ -54,7 +59,8 @@ function customComp(props, html){
 function CustomShowcase() {
   comps.add('p', customComp);
   console.log(comps)
-  const customNode = comps.r.p({text: 'Hello Custom World'})
+  const customNode = document.createElement('soshi-p');
+  customNode.setAttribute('text', 'hello custom world')
   console.log(customNode);
   stage.appendChild(customNode);
 }
@@ -63,10 +69,10 @@ function Showcase() {
   // Define
   document.body.appendChild(bodyTag);
   TitleShowcase();
-  ButtonShowcase();
-  CardShowcase();
-  ListShowcase();
-  ImageShowcase();
+  // ButtonShowcase();
+  // CardShowcase();
+  // ListShowcase();
+  // ImageShowcase();
   CustomShowcase();
 }
 export default Showcase;
