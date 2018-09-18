@@ -1,5 +1,6 @@
 import Soshi from '../core'
 import componentList from 'components/componentList';
+import bodyTag from './styles'
 // Get stage location
 const stage = document.querySelector('.showcase.yoyo .stage');
 // Choose Dom render for components
@@ -15,8 +16,8 @@ function CardShowcase() {
   // Get the Card function from inside Soshi
   const CardNode = comps.r.card(props);
   console.log(CardNode);
-  // Renders using bel because 'dom' was chosen at instance
-  stage.appendChild(CardNode);
+
+  // stage.appendChild(test);
 }
 
 function ButtonShowcase() {
@@ -30,8 +31,10 @@ function ButtonShowcase() {
 }
 
 function TitleShowcase() {
-  const SoshiTitle = comps.r.title({text: 'Hello from inside soshi'});
-  stage.appendChild(SoshiTitle);
+  comps.registerElement('title', comps.r.title, {text: 'More from inside soshi'});
+  // Renders using bel because 'dom' was chosen at instance
+  const test = document.createElement('soshi-title');
+  stage.appendChild(test);
 }
 
 function ListShowcase() {
@@ -58,6 +61,7 @@ function CustomShowcase() {
 
 function Showcase() {
   // Define
+  document.body.appendChild(bodyTag);
   TitleShowcase();
   ButtonShowcase();
   CardShowcase();
