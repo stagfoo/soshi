@@ -13,91 +13,9 @@
 Experimental Component libray for any framework
 </p>
 
-# Includes
-- 🕹️ Reusable component system
-- 🍞 Simple interface
-- 🐤 Teeny tiny
-- ⚙️ Functional
-
-## Run Example Usage
-```
-npm install
-npm run start
-```
-
-## Usage
-include soshi and choose a renderer, there are 3 included by default
-
-```js
-import Soshi from 'soshi'
-
-const domComps = new Soshi({ dom: 'bel' }); //default renderer bel
-domComps.r.title({text: 'Im a dom element'}); //HTMLElement
-
-const vdomComps = new Soshi({ dom: 'vdom' }); //renderer virtual-dom
-vdomComps.r.title({text: 'Im a vdom element'}); //virtual-dom object
-
-const textComps = new Soshi({ dom: 'plaintext' }); //renderer plaintext
-textComps.r.title({text: 'Im plaintext'}); //plaintext string
-```
-## Example external render
-
-```ts
-import Soshi from '../../core';
-import componentList from 'components/componentList'
-import React from 'react';
-
-const Components = new Soshi({
-  dom: 'custom',
-  customDom: React.createElement
-})
-Components.load(componentList);
-export default Components;
-```
-
-## Built Components
-these are built and in the showcase page
-
-- Title
-- Card
-- Text List
-- Button
-- Image
-
-## How to build a Soshi ready component
-
-```ts
-function Title(props, html) {
-  // html is the renderer
-  return html`<h1>${props.text}</h1>`; //HTMLElement
-}
-```
-
-## Styling
-These components will be styled by [fairybread](https://github.com/stagfoo/fairybread) in the Raeon Design Language (coming soon)
-
-### Fairybread
-a small css-in-js library to easy create scope style for components
-[Here](https://github.com/stagfoo/fairybread)
-
-### Raeon - WIP
-a design language focused on rounded and bright beautiful colors
-[Design](https://www.figma.com/file/FpKGFJhA3XsT0GNMVzA0Ywww/Main) | [Code](https://github.com/stagfoo/raeon)
-
-# Rendering System
-Soshi works by create a simple instanced object, passes in the renderer each time to [hyperx](https://github.com/choojs/hyperx), along with props. this makes structuring component easy and fast.
-
-## Frameworks
-### Tested
-- **Bel** : Works fine
-- **vdom**: Works fine
-- **React** : Working using the createElement render function.
-- **Vue**: Working with `plaintest` render, could be better
-## Untested
-- Angular: No tested
-- Web Component
-- [add your own framework!](https://github.com/stagfoo/soshi/issues/new)
-
 # Idea behind 素子(soshi)
 to create a simple extendable functional component system.
 The end result should be a component that can be added to any framework.
+
+# Why cancel it?
+in my opinion the need for soshi is now filled by <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">Custom elements</a> I would recommend using a custom element library or native custom elements instead. I will be using <a href="https://github.com/Polymer/lit-element">Lit Element</a>
